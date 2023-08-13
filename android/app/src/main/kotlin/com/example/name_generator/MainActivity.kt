@@ -1,4 +1,4 @@
-package com.example.name_generator
+package com.example.motivation_quotes
 
 import io.flutter.embedding.android.FlutterActivity
 

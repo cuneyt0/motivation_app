@@ -1,4 +1,4 @@
-# name_generator
+# motivation_quotes
 
 A new Flutter project.
 

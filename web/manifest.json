@@ -1,6 +1,6 @@
 {
-    "name": "name_generator",
-    "short_name": "name_generator",
+    "name": "motivation_quotes",
+    "short_name": "motivation_quotes",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

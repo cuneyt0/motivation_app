@@ -1,4 +1,4 @@
-import 'package:name_generator/core/navigation/navigation.dart';
+import 'package:motivation_quotes/core/navigation/navigation.dart';
 import 'package:provider/provider.dart';
 
 import '../../../../core/navigation/router.dart';

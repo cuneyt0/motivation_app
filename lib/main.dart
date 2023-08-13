@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:get_storage/get_storage.dart';
-import 'package:name_generator/core/navigation/navigation.dart';
-import 'package:name_generator/core/navigation/router.dart';
-import 'package:name_generator/core/provider/multi_provider.dart';
-import 'package:name_generator/core/utilities/easy_localization/easy_localization_manager.dart';
+import 'package:motivation_quotes/core/navigation/navigation.dart';
+import 'package:motivation_quotes/core/navigation/router.dart';
+import 'package:motivation_quotes/core/provider/multi_provider.dart';
+import 'package:motivation_quotes/core/utilities/easy_localization/easy_localization_manager.dart';
 import 'package:provider/provider.dart';
 
 void main() async {

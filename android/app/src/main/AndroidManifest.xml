@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.name_generator">
+    package="com.example.motivation_quotes">
    <application
-        android:label="name_generator"
+        android:label="motivation_quotes"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

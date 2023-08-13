@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:name_generator/app/screen/home/route/home_router.dart';
-import 'package:name_generator/app/screen/home/view/home_view.dart';
-import 'package:name_generator/app/screen/home/viewmodel/home_viewmodel.dart';
+import 'package:motivation_quotes/app/screen/home/route/home_router.dart';
+import 'package:motivation_quotes/app/screen/home/view/home_view.dart';
+import 'package:motivation_quotes/app/screen/home/viewmodel/home_viewmodel.dart';
 
 import 'navigation.dart';
 
