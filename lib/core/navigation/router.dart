@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:motivation_quotes/app/screen/home/route/home_router.dart';
 import 'package:motivation_quotes/app/screen/home/view/home_view.dart';
 import 'package:motivation_quotes/app/screen/home/viewmodel/home_viewmodel.dart';
+import 'package:motivation_quotes/app/screen/splash/route/splash_router.dart';
+import 'package:motivation_quotes/app/screen/splash/view/splash_view.dart';
+import 'package:motivation_quotes/app/screen/splash/viewmodel/splash_viewmodel.dart';
 
 import 'navigation.dart';
 
@@ -31,9 +34,9 @@ class AppRouter extends RouterProtocol {
 
 class MainRouter extends AppRouter {
   static Widget startApp() {
-    final router = HomeRouter();
-    final viewModel = HomeViewModel(router);
-    final view = HomeView(viewModel: viewModel);
+    final router = SplashRouter();
+    final viewModel = SplashViewModel(router);
+    final view = SplashView(viewModel: viewModel);
     return view;
   }
 }

@@ -1,3 +1,3 @@
 import '../../../../core/navigation/router.dart';
 
-class NameGeneratorRouter extends AppRouter{}
+class CategoryRouter extends AppRouter{}

@@ -1,8 +1,8 @@
 import 'dart:math';
 
+import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:motivation_quotes/src/dictionaries/education_quotes.dart';
 import 'package:provider/provider.dart';
 
 import '../../../../core/base/base_view.dart';
@@ -17,8 +17,8 @@ class HomeView extends BaseViewProtocol<HomeViewModel> {
   void dispose() {}
 
   @override
-  void init() {
-    WidgetsBinding.instance.addPostFrameCallback((timeStamp) {});
+  void init() async {
+    // await viewModel.initVm();
   }
 
   @override
@@ -30,23 +30,35 @@ class HomeView extends BaseViewProtocol<HomeViewModel> {
           appBar: AppBar(
             title: const Text("Motivasyon Sözleri"),
           ),
+          bottomNavigationBar: AnimatedBottomNavigationBar(
+              icons: consumer.iconList,
+              activeColor: Colors.blue,
+              activeIndex: consumer.bottomNavIndex,
+              gapLocation: GapLocation.center,
+              notchSmoothness: NotchSmoothness.verySmoothEdge,
+              leftCornerRadius: 32,
+              rightCornerRadius: 32,
+              onTap: (index) => consumer.onTap(index)),
           body: PageView.builder(
-            itemCount: quotesEducation.length,
+            itemCount: consumer.dataList?.length,
             scrollDirection: Axis.vertical,
             itemBuilder: (context, index) {
-              int randomIndex = random.nextInt(quotesEducation.length);
+              int randomIndex = random.nextInt(consumer.dataList?.length ?? 1);
               return Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text(
-                    '${quotesEducation[randomIndex].note}',
-                    textAlign: TextAlign.center,
-                    style: GoogleFonts.anekOdia(
-                        color: Colors.black,
-                        fontSize: 25,
-                        textStyle: Theme.of(context).textTheme.displaySmall),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 20.0, right: 20),
+                    child: Text(
+                      '${consumer.dataList?[randomIndex].note}',
+                      textAlign: TextAlign.center,
+                      style: GoogleFonts.anekOdia(
+                          color: Colors.black,
+                          fontSize: 25,
+                          textStyle: Theme.of(context).textTheme.displaySmall),
+                    ),
                   ),
-                  Text('${quotesEducation[randomIndex].author}')
+                  Text('${consumer.dataList?[randomIndex].author}')
                 ],
               );
             },
@@ -76,16 +88,4 @@ class HomeView extends BaseViewProtocol<HomeViewModel> {
             ),
           ),
    */
-
-  List<Widget> _bodyList(BuildContext context, HomeViewModel consumer) => [
-        ElevatedButton(
-            onPressed: () => consumer.showTextStyle(),
-            child: const Text("Yazı Stilleri")),
-        ElevatedButton(
-            onPressed: () => consumer.nameGenerator(),
-            child: const Text("İsim Üret")),
-        ElevatedButton(
-            onPressed: () => consumer.showNameGenerator(),
-            child: const Text("Random isim Üret")),
-      ];
 }

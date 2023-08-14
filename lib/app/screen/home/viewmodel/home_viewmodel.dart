@@ -1,60 +1,58 @@
-import 'dart:math';
+import 'package:flutter/material.dart';
+import 'package:motivation_quotes/app/model/motivation/motivation.dart';
+import 'package:motivation_quotes/core/utilities/cache_manager.dart';
+import 'package:motivation_quotes/src/dictionaries/general_quotes.dart';
 
 import '../../../../core/base/base_viewmodel.dart';
 import '../route/home_router.dart';
 
 class HomeViewModel extends BaseViewModel<HomeRouter> {
   HomeViewModel(HomeRouter router) : super(router);
+  List<IconData> iconList = [Icons.change_circle_rounded, Icons.add];
 
-  void showTextStyle() {
-    router.showTextStyle();
-  }
+  int bottomNavIndex = 0;
+  final CacheManager _cacheManager = CacheManager();
 
-  bool startAnimation = false;
-
-  void init() {
-    startAnimation = true;
-    print('startAnimation $startAnimation');
+  onTap(int index) {
+    bottomNavIndex = index;
+    switch (bottomNavIndex) {
+      case 1:
+        router.showCategory(homeViewModel: this);
+        notifty();
+        break;
+      default:
+    }
     notifty();
   }
 
-  final List<String> adjectives = [
-    'Creative',
-    'Innovative',
-    'Dynamic',
-    'Inspiring',
-    'Tech',
-    'Global',
-    'Smart',
-    'Elegant',
-    'Bold',
-    'Modern',
-  ];
-  final List<String> nouns = [
-    'Solutions',
-    'Ideas',
-    'Ventures',
-    'Labs',
-    'Tech',
-    'Digital',
-    'Design',
-    'Studios',
-    'Innovation',
-    'Systems',
-  ];
-  String? businessName = 'asd';
-
-  final Random random = Random();
-  void nameGenerator() {
-    final String adjective = adjectives[random.nextInt(adjectives.length)];
-    final String noun = nouns[random.nextInt(nouns.length)];
-    businessName = '$adjective $noun Cüneyt ';
-    print('Generated Business Name: $businessName ad');
-
+  void changedState() {
     notifty();
   }
 
-  void showNameGenerator() {
-    router.showNameGenerator();
+  List<Motivation>? dataList;
+
+  Future<void> initVm() async {
+    // await _cacheManager.removeAllData();
+    final type = await _cacheManager.getType();
+    print(type.toString());
+    print(type.runtimeType);
+
+    if (type == null) {
+      dataList = quotesGeneral;
+
+      _cacheManager.saveType(ListType.okul);
+
+      print("NULL");
+    } else {
+      if (type == 'general') {
+        dataList = quotesGeneral;
+        notifty();
+        print("ALO");
+      } else {
+        print("DEĞİLL");
+      }
+      print("NULL DEĞİL");
+    }
+    notifty();
   }
 }

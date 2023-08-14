@@ -1,6 +1,8 @@
+import 'package:motivation_quotes/app/screen/category/route/category_router.dart';
+import 'package:motivation_quotes/app/screen/category/viewmodel/category_viewmodel.dart';
 import 'package:motivation_quotes/app/screen/home/route/home_router.dart';
-import 'package:motivation_quotes/app/screen/name_generator/route/name_generator_router.dart';
-import 'package:motivation_quotes/app/screen/name_generator/viewmodel/name_generator_viewmodel.dart';
+import 'package:motivation_quotes/app/screen/splash/route/splash_router.dart';
+import 'package:motivation_quotes/app/screen/splash/viewmodel/splash_viewmodel.dart';
 import 'package:motivation_quotes/app/screen/text_style/route/text_style_router.dart';
 import 'package:motivation_quotes/app/screen/text_style/viewmodel/text_style_viewmodel.dart';
 import 'package:motivation_quotes/core/theme/core/theme_manager.dart';
@@ -14,8 +16,10 @@ class MultiProviderList {
     ChangeNotifierProvider(create: (context) => ThemeManager()),
     ChangeNotifierProvider(create: (context) => HomeViewModel(HomeRouter())),
     ChangeNotifierProvider(
-        create: (context) => NameGeneratorViewModel(NameGeneratorRouter())),
-    ChangeNotifierProvider(
         create: (context) => TextStyleViewModel(TextStyleRouter())),
+    ChangeNotifierProvider(
+        create: (context) => CategoryViewModel(CategoryRouter())),
+    ChangeNotifierProvider(
+        create: (context) => SplashViewModel(SplashRouter())),
   ];
 }

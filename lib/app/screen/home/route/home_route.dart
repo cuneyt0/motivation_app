@@ -1,3 +1,4 @@
+import 'package:motivation_quotes/app/model/motivation/motivation.dart';
 import 'package:motivation_quotes/core/navigation/navigation.dart';
 import 'package:provider/provider.dart';
 
@@ -6,11 +7,12 @@ import '../view/home_view.dart';
 import '../viewmodel/home_viewmodel.dart';
 
 mixin HomeRoute on AppRouter {
-  Future<dynamic> showHome() async {
+  Future<dynamic> showHome({List<Motivation>? dataList}) async {
     var viewModel = Provider.of<HomeViewModel>(
         Navigation.navigatorKey.currentContext!,
         listen: false);
     final view = HomeView(viewModel: viewModel);
-    return push(view);
+    viewModel.dataList = dataList;
+    return pushAndRemoveAll(view);
   }
 }
