@@ -4,7 +4,6 @@ import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.da
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:motivation_quotes/core/extension/color_extension.dart';
-import 'package:motivation_quotes/gen/assets.gen.dart';
 import 'package:provider/provider.dart';
 
 import '../../../../core/base/base_view.dart';
@@ -38,12 +37,12 @@ class HomeView extends BaseViewProtocol<HomeViewModel> {
           body: LayoutBuilder(builder: (context, constraints) {
             return Container(
               decoration: BoxDecoration(
-                image: DecorationImage(
-                  fit: BoxFit.cover,
-                  image: AssetImage(
-                    Assets.images.vlad.path,
-                  ),
-                ), //opacity: .3
+                image: consumer.isSelectedBackgroundImage == true
+                    ? DecorationImage(
+                        fit: BoxFit.cover,
+                        image: AssetImage(consumer.backgroundImage!),
+                      )
+                    : null, //opacity: .3
               ),
               child: PageView.builder(
                 itemCount: consumer.dataList?.length,

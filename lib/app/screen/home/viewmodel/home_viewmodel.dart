@@ -15,12 +15,23 @@ class HomeViewModel extends BaseViewModel<HomeRouter> {
   int bottomNavIndex = 0;
   Color get backgroundColor => _backgroundColor ?? Colors.white;
   Color? _backgroundColor;
+  bool? isSelectedBackgroundImage = false;
+
+  String? get backgroundImage => _backgroundImage ?? '';
+  String? _backgroundImage;
 
   Color getColor(Color color) {
     _backgroundColor = color;
 
     notifty();
     return backgroundColor;
+  }
+
+  String? getImage(String? path) {
+    _backgroundImage = path;
+
+    notifty();
+    return backgroundImage;
   }
 
   onTap(int index) {

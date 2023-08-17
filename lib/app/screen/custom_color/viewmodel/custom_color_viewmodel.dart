@@ -23,8 +23,19 @@ class CustomColorViewModel extends BaseViewModel<CustomColorRouter> {
   ];
 
   void ontap(Color color) {
-    homeViewModel?.getColor(color);
+    homeViewModel
+      ?..getColor(color)
+      ..isSelectedBackgroundImage = false;
     router.close();
+    notifty();
+  }
+
+  void selectImage(String? image) {
+    homeViewModel
+      ?..getImage(image)
+      ..isSelectedBackgroundImage = true;
+    router.close();
+    print(image);
     notifty();
   }
 }
