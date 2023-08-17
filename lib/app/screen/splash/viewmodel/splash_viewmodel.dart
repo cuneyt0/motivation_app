@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:motivation_quotes/app/model/motivation/motivation.dart';
 import 'package:motivation_quotes/core/utilities/cache_manager.dart';
 import 'package:motivation_quotes/src/dictionaries/base_motivition_quotes.dart';
@@ -13,13 +14,14 @@ class SplashViewModel extends BaseViewModel<SplashRouter> {
     // await CacheManager.instance.removeAllData();
     Future.delayed(const Duration(milliseconds: 100)).then((value) async {
       final type = await CacheManager.instance.getType();
-      print(type.toString());
-      print(type.runtimeType);
+
+      debugPrint(type.toString());
+      debugPrint('${type.runtimeType}');
 
       BaseMotivationQuotes.getInstance().setListType(type);
 
       _dataList = BaseMotivationQuotes.getInstance().list;
-      print(_dataList?.length);
+      debugPrint('${_dataList?.length}');
 
       router.showHome(dataList: _dataList);
     });

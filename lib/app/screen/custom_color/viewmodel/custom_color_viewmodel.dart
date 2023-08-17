@@ -14,7 +14,12 @@ class CustomColorViewModel extends BaseViewModel<CustomColorRouter> {
   List<String> images = [
     Assets.images.dock.path,
     Assets.images.omid.path,
-    Assets.images.sitrika.path
+    Assets.images.sitrika.path,
+    Assets.images.sanket.path,
+    Assets.images.sasha.path,
+    Assets.images.raamin.path,
+    Assets.images.manish.path,
+    Assets.images.vlad.path,
   ];
 
   void ontap(Color color) {

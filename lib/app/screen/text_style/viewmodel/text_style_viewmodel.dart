@@ -27,7 +27,7 @@ class TextStyleViewModel extends BaseViewModel<TextStyleRouter> {
   }
 
   void copyText(String? data) {
-    print(data);
+    debugPrint(data);
 
     // pasteStyledTextFromClipboard();
 
@@ -103,7 +103,7 @@ class TextStyleViewModel extends BaseViewModel<TextStyleRouter> {
           },
         );
       } catch (e) {
-        print('Geçersiz veri formatı');
+        debugPrint('Geçersiz veri formatı');
       }
     }
   }

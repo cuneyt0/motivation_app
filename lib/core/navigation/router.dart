@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:motivation_quotes/app/screen/home/route/home_router.dart';
-import 'package:motivation_quotes/app/screen/home/view/home_view.dart';
-import 'package:motivation_quotes/app/screen/home/viewmodel/home_viewmodel.dart';
 import 'package:motivation_quotes/app/screen/splash/route/splash_router.dart';
 import 'package:motivation_quotes/app/screen/splash/view/splash_view.dart';
 import 'package:motivation_quotes/app/screen/splash/viewmodel/splash_viewmodel.dart';

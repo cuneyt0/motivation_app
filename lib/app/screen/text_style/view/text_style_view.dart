@@ -149,7 +149,7 @@ class TextStyleView extends BaseViewProtocol<TextStyleViewModel> {
           },
         );
       } catch (e) {
-        print('Geçersiz veri formatı');
+        debugPrint('Geçersiz veri formatı');
       }
     }
   }

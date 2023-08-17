@@ -18,7 +18,7 @@ class HomeViewModel extends BaseViewModel<HomeRouter> {
 
   Color getColor(Color color) {
     _backgroundColor = color;
-    print(_backgroundColor);
+
     notifty();
     return backgroundColor;
   }

@@ -15,14 +15,33 @@ class $AssetsImagesGen {
   /// File path: assets/images/dock.jpg
   AssetGenImage get dock => const AssetGenImage('assets/images/dock.jpg');
 
+  /// File path: assets/images/kiljoy.png
+  AssetGenImage get kiljoy => const AssetGenImage('assets/images/kiljoy.png');
+
+  /// File path: assets/images/manish.jpg
+  AssetGenImage get manish => const AssetGenImage('assets/images/manish.jpg');
+
   /// File path: assets/images/omid.jpg
   AssetGenImage get omid => const AssetGenImage('assets/images/omid.jpg');
+
+  /// File path: assets/images/raamin.jpg
+  AssetGenImage get raamin => const AssetGenImage('assets/images/raamin.jpg');
+
+  /// File path: assets/images/sanket.jpg
+  AssetGenImage get sanket => const AssetGenImage('assets/images/sanket.jpg');
+
+  /// File path: assets/images/sasha.jpg
+  AssetGenImage get sasha => const AssetGenImage('assets/images/sasha.jpg');
 
   /// File path: assets/images/sitrika.jpg
   AssetGenImage get sitrika => const AssetGenImage('assets/images/sitrika.jpg');
 
+  /// File path: assets/images/vlad.jpg
+  AssetGenImage get vlad => const AssetGenImage('assets/images/vlad.jpg');
+
   /// List of all assets
-  List<AssetGenImage> get values => [dock, omid, sitrika];
+  List<AssetGenImage> get values =>
+      [dock, kiljoy, manish, omid, raamin, sanket, sasha, sitrika, vlad];
 }
 
 class $AssetsLocalizableGen {

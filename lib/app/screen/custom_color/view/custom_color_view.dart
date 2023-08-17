@@ -27,6 +27,7 @@ class CustomColorView extends BaseViewProtocol<CustomColorViewModel> {
           ),
           body: ListView.separated(
             shrinkWrap: true,
+            physics: const NeverScrollableScrollPhysics(),
             separatorBuilder: (context, index) => const SizedBox(height: 10),
             padding: const EdgeInsets.only(left: 10, right: 10, bottom: 0),
             itemBuilder: (context, index) =>
@@ -56,6 +57,7 @@ class CustomColorView extends BaseViewProtocol<CustomColorViewModel> {
                 height: MediaQuery.of(context).size.height *
                     (MediaQuery.of(context).size.height < 800 ? 0.18 : 0.23),
                 child: GridView.builder(
+                  shrinkWrap: true,
                   scrollDirection: Axis.horizontal,
                   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount: 1,

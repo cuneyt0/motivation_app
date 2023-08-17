@@ -38,9 +38,13 @@ class HomeView extends BaseViewProtocol<HomeViewModel> {
           body: LayoutBuilder(builder: (context, constraints) {
             return Container(
               decoration: BoxDecoration(
-                  image: DecorationImage(
-                      fit: BoxFit.cover,
-                      image: AssetImage(Assets.images.dock.path))),
+                image: DecorationImage(
+                  fit: BoxFit.cover,
+                  image: AssetImage(
+                    Assets.images.vlad.path,
+                  ),
+                ), //opacity: .3
+              ),
               child: PageView.builder(
                 itemCount: consumer.dataList?.length,
                 scrollDirection: Axis.vertical,
@@ -62,8 +66,10 @@ class HomeView extends BaseViewProtocol<HomeViewModel> {
                                   color: CustomTextColor.getTextColor(
                                       consumer.backgroundColor),
                                   fontSize: 25,
-                                  textStyle:
-                                      Theme.of(context).textTheme.displaySmall),
+                                  fontWeight: FontWeight.bold,
+                                  textStyle: Theme.of(context)
+                                      .textTheme
+                                      .headlineMedium),
                             ),
                           ),
                           Text('${consumer.dataList?[randomIndex].author}')
