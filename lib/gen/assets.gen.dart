@@ -9,6 +9,22 @@
 
 import 'package:flutter/widgets.dart';
 
+class $AssetsImagesGen {
+  const $AssetsImagesGen();
+
+  /// File path: assets/images/dock.jpg
+  AssetGenImage get dock => const AssetGenImage('assets/images/dock.jpg');
+
+  /// File path: assets/images/omid.jpg
+  AssetGenImage get omid => const AssetGenImage('assets/images/omid.jpg');
+
+  /// File path: assets/images/sitrika.jpg
+  AssetGenImage get sitrika => const AssetGenImage('assets/images/sitrika.jpg');
+
+  /// List of all assets
+  List<AssetGenImage> get values => [dock, omid, sitrika];
+}
+
 class $AssetsLocalizableGen {
   const $AssetsLocalizableGen();
 
@@ -25,6 +41,7 @@ class $AssetsLocalizableGen {
 class Assets {
   Assets._();
 
+  static const $AssetsImagesGen images = $AssetsImagesGen();
   static const $AssetsLocalizableGen localizable = $AssetsLocalizableGen();
 }
 

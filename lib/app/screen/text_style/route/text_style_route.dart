@@ -1,8 +1,7 @@
-import '../../../../core/navigation/router.dart';
-import '../../../../core/navigation/navigation.dart';
 import 'package:provider/provider.dart';
 
-import 'text_style_router.dart';
+import '../../../../core/navigation/navigation.dart';
+import '../../../../core/navigation/router.dart';
 import '../view/text_style_view.dart';
 import '../viewmodel/text_style_viewmodel.dart';
 

@@ -4,7 +4,7 @@ import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.da
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:motivation_quotes/core/extension/color_extension.dart';
-import 'package:motivation_quotes/core/extension/size_extension.dart';
+import 'package:motivation_quotes/gen/assets.gen.dart';
 import 'package:provider/provider.dart';
 
 import '../../../../core/base/base_view.dart';
@@ -35,41 +35,46 @@ class HomeView extends BaseViewProtocol<HomeViewModel> {
               gapLocation: GapLocation.none,
               notchSmoothness: NotchSmoothness.verySmoothEdge,
               onTap: (index) => consumer.onTap(index)),
-          body: PageView.builder(
-            itemCount: consumer.dataList?.length,
-            scrollDirection: Axis.vertical,
-            itemBuilder: (context, index) {
-              int randomIndex = random.nextInt(consumer.dataList?.length ?? 1);
-              return Stack(
-                children: [
-                  Center(
-                    child: FlutterLogo(
-                      size: context.screenHeight(1).toDouble(),
-                    ),
-                  ),
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
+          body: LayoutBuilder(builder: (context, constraints) {
+            return Container(
+              decoration: BoxDecoration(
+                  image: DecorationImage(
+                      fit: BoxFit.cover,
+                      image: AssetImage(Assets.images.dock.path))),
+              child: PageView.builder(
+                itemCount: consumer.dataList?.length,
+                scrollDirection: Axis.vertical,
+                itemBuilder: (context, index) {
+                  int randomIndex =
+                      random.nextInt(consumer.dataList?.length ?? 1);
+                  return Stack(
                     children: [
-                      Padding(
-                        padding: const EdgeInsets.only(left: 20.0, right: 20),
-                        child: Text(
-                          '${consumer.dataList?[randomIndex].note}',
-                          textAlign: TextAlign.center,
-                          style: GoogleFonts.anekOdia(
-                              color: CustomTextColor.getTextColor(
-                                  consumer.backgroundColor),
-                              fontSize: 25,
-                              textStyle:
-                                  Theme.of(context).textTheme.displaySmall),
-                        ),
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Padding(
+                            padding:
+                                const EdgeInsets.only(left: 20.0, right: 20),
+                            child: Text(
+                              '${consumer.dataList?[randomIndex].note}',
+                              textAlign: TextAlign.center,
+                              style: GoogleFonts.anekOdia(
+                                  color: CustomTextColor.getTextColor(
+                                      consumer.backgroundColor),
+                                  fontSize: 25,
+                                  textStyle:
+                                      Theme.of(context).textTheme.displaySmall),
+                            ),
+                          ),
+                          Text('${consumer.dataList?[randomIndex].author}')
+                        ],
                       ),
-                      Text('${consumer.dataList?[randomIndex].author}')
                     ],
-                  ),
-                ],
-              );
-            },
-          ),
+                  );
+                },
+              ),
+            );
+          }),
         );
       },
     );

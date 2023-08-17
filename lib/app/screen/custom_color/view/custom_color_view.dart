@@ -23,7 +23,7 @@ class CustomColorView extends BaseViewProtocol<CustomColorViewModel> {
       builder: (_, consumer, widget) {
         return Scaffold(
           appBar: AppBar(
-            title: const Text("CustomColorPage"),
+            title: const Text("Arka plan Seç"),
           ),
           body: ListView.separated(
             shrinkWrap: true,
@@ -47,7 +47,7 @@ class CustomColorView extends BaseViewProtocol<CustomColorViewModel> {
             const Padding(
               padding: EdgeInsets.only(top: 10.0, bottom: 10, left: 5),
               child: AutoSizeText(
-                "ArkaPlan",
+                "Renkler",
                 style: TextStyle(fontSize: 18, color: Colors.black),
                 maxLines: 2,
               ),
@@ -83,6 +83,41 @@ class CustomColorView extends BaseViewProtocol<CustomColorViewModel> {
                   itemCount: consumer.allColors.length,
                 )),
           ],
-        )
+        ),
+        Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const Padding(
+              padding: EdgeInsets.only(top: 10.0, bottom: 10, left: 5),
+              child: AutoSizeText(
+                "Resimler",
+                style: TextStyle(fontSize: 18, color: Colors.black),
+                maxLines: 2,
+              ),
+            ),
+            SizedBox(
+                height: MediaQuery.of(context).size.height *
+                    (MediaQuery.of(context).size.height < 800 ? 0.18 : 0.23),
+                child: GridView.builder(
+                  scrollDirection: Axis.horizontal,
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: 1,
+                      childAspectRatio: 1,
+                      mainAxisSpacing: 20),
+                  itemBuilder: (context, index) {
+                    return ClipRRect(
+                      borderRadius: BorderRadius.circular(5), // Image border
+                      child: SizedBox.fromSize(
+                          child: Image.asset(
+                        consumer.images[index],
+                        fit: BoxFit.cover,
+                      )),
+                    );
+                  },
+                  itemCount: consumer.images.length,
+                )),
+          ],
+        ),
       ];
 }

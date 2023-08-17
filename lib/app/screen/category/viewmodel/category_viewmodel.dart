@@ -22,6 +22,14 @@ class CategoryViewModel extends BaseViewModel<CategoryRouter> {
       name: "Spor",
       color: Colors.blue,
     ),
+    Category(
+      name: "Değişim ve Gelişim",
+      color: Colors.pinkAccent,
+    ),
+    Category(
+      name: "Tutku",
+      color: Colors.pink,
+    ),
   ];
 
   onTap(int index) async {
@@ -44,6 +52,14 @@ class CategoryViewModel extends BaseViewModel<CategoryRouter> {
         break;
       case 4:
         await CacheManager.instance.saveType(ListType.sport);
+        homeViewModel?.changedState();
+        break;
+      case 5:
+        await CacheManager.instance.saveType(ListType.changeAndDevelopment);
+        homeViewModel?.changedState();
+        break;
+      case 6:
+        await CacheManager.instance.saveType(ListType.passion);
         homeViewModel?.changedState();
         break;
 

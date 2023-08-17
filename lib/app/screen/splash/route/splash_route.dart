@@ -1,8 +1,7 @@
-import '../../../../core/navigation/router.dart';
-import '../../../../core/navigation/navigation.dart';
 import 'package:provider/provider.dart';
 
-import 'splash_router.dart';
+import '../../../../core/navigation/navigation.dart';
+import '../../../../core/navigation/router.dart';
 import '../view/splash_view.dart';
 import '../viewmodel/splash_viewmodel.dart';
 

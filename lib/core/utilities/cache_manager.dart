@@ -1,7 +1,15 @@
 import 'package:motivation_quotes/src/dictionaries/base_motivition_quotes.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-enum ListType { general, love, education, possitive, sport }
+enum ListType {
+  general,
+  love,
+  education,
+  possitive,
+  sport,
+  changeAndDevelopment,
+  passion
+}
 
 class CacheManager {
   static CacheManager instance = CacheManager();
@@ -29,6 +37,11 @@ class CacheManager {
         return ListType.education;
       case 'ListType.possitive':
         return ListType.possitive;
+      case 'ListType.changeAndDevelopment':
+        return ListType.changeAndDevelopment;
+      case 'ListType.passion':
+        return ListType.passion;
+
       default:
         return null;
     }
