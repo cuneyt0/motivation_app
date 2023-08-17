@@ -1,5 +1,7 @@
 import 'package:motivation_quotes/app/screen/category/route/category_router.dart';
 import 'package:motivation_quotes/app/screen/category/viewmodel/category_viewmodel.dart';
+import 'package:motivation_quotes/app/screen/custom_color/route/custom_color_router.dart';
+import 'package:motivation_quotes/app/screen/custom_color/viewmodel/custom_color_viewmodel.dart';
 import 'package:motivation_quotes/app/screen/home/route/home_router.dart';
 import 'package:motivation_quotes/app/screen/splash/route/splash_router.dart';
 import 'package:motivation_quotes/app/screen/splash/viewmodel/splash_viewmodel.dart';
@@ -21,5 +23,7 @@ class MultiProviderList {
         create: (context) => CategoryViewModel(CategoryRouter())),
     ChangeNotifierProvider(
         create: (context) => SplashViewModel(SplashRouter())),
+    ChangeNotifierProvider(
+        create: (context) => CustomColorViewModel(CustomColorRouter())),
   ];
 }

@@ -1,40 +1,37 @@
+import 'package:motivation_quotes/src/dictionaries/base_motivition_quotes.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-enum ListType { okul, sevgi, education, possitive }
+enum ListType { general, love, education, possitive, sport }
 
 class CacheManager {
   static CacheManager instance = CacheManager();
   final Future<SharedPreferences> _prefs = SharedPreferences.getInstance();
   Future<bool> saveType(ListType? type) async {
-    // Obtain shared preferences.
+    BaseMotivationQuotes myInstance = BaseMotivationQuotes.getInstance();
+
     final SharedPreferences prefs = await _prefs;
 
-    String? data;
-
-    switch (type) {
-      case ListType.okul:
-        data = "general";
-        break;
-      case ListType.sevgi:
-        data = "love";
-        break;
-      case ListType.education:
-        data = "education";
-        break;
-      case ListType.possitive:
-        data = "possitive";
-        break;
-      default:
-    }
-
-    await prefs.setString(CacheManagerKey.type.toString(), data.toString());
-
+    await prefs.setString(CacheManagerKey.type.toString(), type.toString());
+    myInstance.setListType(type);
     return true;
   }
 
-  Future<String?> getType() async {
+  Future<ListType?> getType() async {
     final SharedPreferences prefs = await _prefs;
-    return prefs.getString(CacheManagerKey.type.toString());
+    var a = prefs.getString(CacheManagerKey.type.toString());
+
+    switch (a) {
+      case 'ListType.general':
+        return ListType.general;
+      case 'ListType.love':
+        return ListType.love;
+      case 'ListType.education':
+        return ListType.education;
+      case 'ListType.possitive':
+        return ListType.possitive;
+      default:
+        return null;
+    }
   }
 
   Future<bool> removeAllData() async {

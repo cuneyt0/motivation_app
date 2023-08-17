@@ -1,10 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:motivation_quotes/app/screen/home/viewmodel/home_viewmodel.dart';
 import 'package:motivation_quotes/core/utilities/cache_manager.dart';
-import 'package:motivation_quotes/src/dictionaries/education_quotes.dart';
-import 'package:motivation_quotes/src/dictionaries/general_quotes.dart';
-import 'package:motivation_quotes/src/dictionaries/positive_thinking_quotes.dart';
-import 'package:motivation_quotes/src/dictionaries/quotes_love.dart';
 
 import '../../../../core/base/base_viewmodel.dart';
 import '../route/category_router.dart';
@@ -22,35 +18,33 @@ class CategoryViewModel extends BaseViewModel<CategoryRouter> {
     Category(name: "Eğitim", color: Colors.green),
     Category(name: "Positif Düşünme", color: Colors.greenAccent),
     Category(name: "Aşk", color: Colors.red),
+    Category(
+      name: "Spor",
+      color: Colors.blue,
+    ),
   ];
 
-  onTap(int index) {
+  onTap(int index) async {
     switch (index) {
       case 0:
-        homeViewModel
-          ?..dataList = quotesGeneral
-          ..changedState();
-
+        await CacheManager.instance.saveType(ListType.general);
+        homeViewModel?.changedState();
         break;
       case 1:
-        homeViewModel
-          ?..dataList = quotesEducation
-          ..changedState();
-
+        await CacheManager.instance.saveType(ListType.education);
+        homeViewModel?.changedState();
         break;
       case 2:
-        homeViewModel
-          ?..dataList = quotesPositiveThinking
-          ..changedState();
-
-        notifty();
+        await CacheManager.instance.saveType(ListType.possitive);
+        homeViewModel?.changedState();
         break;
       case 3:
-        CacheManager.instance.saveType(ListType.sevgi);
-        homeViewModel
-          ?..dataList = quotesLove
-          ..changedState();
-
+        await CacheManager.instance.saveType(ListType.love);
+        homeViewModel?.changedState();
+        break;
+      case 4:
+        await CacheManager.instance.saveType(ListType.sport);
+        homeViewModel?.changedState();
         break;
 
       default:

@@ -23,6 +23,7 @@ class CategoryView extends BaseViewProtocol<CategoryViewModel> {
             appBar: AppBar(
               title: const Text("Category"),
             ),
+            floatingActionButton: FloatingActionButton(onPressed: () {}),
             body: GridView.builder(
                 itemCount: consumer.nameList.length,
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
