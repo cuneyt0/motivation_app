@@ -18,7 +18,9 @@ class HomeView extends BaseViewProtocol<HomeViewModel> {
   void dispose() {}
 
   @override
-  void init() async {}
+  void init() async {
+    viewModel.initVm();
+  }
 
   @override
   Widget startView(BuildContext context, ThemeManager theme) {
@@ -26,7 +28,6 @@ class HomeView extends BaseViewProtocol<HomeViewModel> {
     return Consumer<HomeViewModel>(
       builder: (_, consumer, widget) {
         return Scaffold(
-          backgroundColor: consumer.backgroundColor,
           bottomNavigationBar: AnimatedBottomNavigationBar(
               icons: consumer.iconList,
               activeColor: Colors.blue,
@@ -37,6 +38,7 @@ class HomeView extends BaseViewProtocol<HomeViewModel> {
           body: LayoutBuilder(builder: (context, constraints) {
             return Container(
               decoration: BoxDecoration(
+                color: consumer.backgroundColor,
                 image: consumer.isSelectedBackgroundImage == true
                     ? DecorationImage(
                         fit: BoxFit.cover,

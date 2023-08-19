@@ -16,9 +16,7 @@ class CacheManager {
   final Future<SharedPreferences> _prefs = SharedPreferences.getInstance();
   Future<bool> saveType(ListType? type) async {
     BaseMotivationQuotes myInstance = BaseMotivationQuotes.getInstance();
-
     final SharedPreferences prefs = await _prefs;
-
     await prefs.setString(CacheManagerKey.type.toString(), type.toString());
     myInstance.setListType(type);
     return true;
@@ -47,11 +45,59 @@ class CacheManager {
     }
   }
 
-  Future<bool> removeAllData() async {
+  Future<bool> removeTpe() async {
     final SharedPreferences prefs = await _prefs;
     prefs.remove(CacheManagerKey.type.toString());
+
+    return true;
+  }
+
+  Future<bool> saveImage(String? image) async {
+    final SharedPreferences prefs = await _prefs;
+    await prefs.setString(CacheManagerKey.image.toString(), image.toString());
+
+    return true;
+  }
+
+  Future<String?> getImage() async {
+    final SharedPreferences prefs = await _prefs;
+    var a = prefs.getString(CacheManagerKey.image.toString());
+    print("$a");
+    return a;
+  }
+
+  Future<bool> removeImage() async {
+    final SharedPreferences prefs = await _prefs;
+    prefs.remove(CacheManagerKey.image.toString());
+    return true;
+  }
+
+  Future<bool> saveColor(String? color) async {
+    final SharedPreferences prefs = await _prefs;
+    await prefs.setString(CacheManagerKey.color.toString(), color.toString());
+
+    return true;
+  }
+
+  Future<String?> getColor() async {
+    final SharedPreferences prefs = await _prefs;
+    var a = prefs.getString(CacheManagerKey.color.toString());
+
+    return a;
+  }
+
+  Future<bool> removeColor() async {
+    final SharedPreferences prefs = await _prefs;
+    prefs.remove(CacheManagerKey.color.toString());
+    return true;
+  }
+
+  Future<bool> removeAllData() async {
+    await removeTpe();
+    await removeColor();
+    await removeImage();
     return true;
   }
 }
 
-enum CacheManagerKey { type }
+enum CacheManagerKey { type, image, color, option }

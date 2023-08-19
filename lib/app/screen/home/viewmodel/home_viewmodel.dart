@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:motivation_quotes/app/model/motivation/motivation.dart';
+import 'package:motivation_quotes/core/utilities/cache_manager.dart';
 import 'package:motivation_quotes/src/dictionaries/base_motivition_quotes.dart';
 
 import '../../../../core/base/base_viewmodel.dart';
@@ -20,9 +21,21 @@ class HomeViewModel extends BaseViewModel<HomeRouter> {
   String? get backgroundImage => _backgroundImage ?? '';
   String? _backgroundImage;
 
+  void initVm() async {
+    switch (isSelectedBackgroundImage) {
+      case false:
+        _backgroundColor =
+            Color(int.tryParse('${await CacheManager.instance.getColor()}')!);
+        break;
+      default:
+        _backgroundImage = await CacheManager.instance.getImage();
+    }
+
+    notifty();
+  }
+
   Color getColor(Color color) {
     _backgroundColor = color;
-
     notifty();
     return backgroundColor;
   }
@@ -50,10 +63,30 @@ class HomeViewModel extends BaseViewModel<HomeRouter> {
     notifty();
   }
 
-  void changedState() {
+  void changedState() async {
     dataList = BaseMotivationQuotes.getInstance().list;
+    switch (isSelectedBackgroundImage) {
+      case true:
+        _backgroundImage = await CacheManager.instance.getImage();
+        break;
+      default:
+    }
 
     notifty();
+  }
+
+  Color? parseColorFromString(String colorString) {
+    final pattern = RegExp(r'0x[0-9a-f]+');
+    final match = pattern.firstMatch(colorString);
+
+    if (match != null) {
+      final colorValue = match.group(0);
+      final colorInt = int.parse(colorValue!, radix: 16);
+
+      return Color(colorInt);
+    }
+
+    return null; // Hata durumu için null
   }
 
   List<Motivation>? dataList;

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:motivation_quotes/app/screen/home/viewmodel/home_viewmodel.dart';
+import 'package:motivation_quotes/core/utilities/cache_manager.dart';
 import 'package:motivation_quotes/gen/assets.gen.dart';
 
 import '../../../../core/base/base_viewmodel.dart';
@@ -22,15 +23,38 @@ class CustomColorViewModel extends BaseViewModel<CustomColorRouter> {
     Assets.images.vlad.path,
   ];
 
-  void ontap(Color color) {
+  Future<void> ontap(Color color) async {
+    final value = getValueFromExpression(color.toString());
+    await CacheManager.instance.saveColor(value);
     homeViewModel
       ?..getColor(color)
-      ..isSelectedBackgroundImage = false;
+      ..isSelectedBackgroundImage = false
+      ..changedState();
     router.close();
+
+    print(value);
+
+    /*homeViewModel
+      ?..isSelectedBackgroundImage = false
+      ..changedState();
+   */
+    /**
+     * 
+     * homeViewModel
+      ?..getColor(color)
+      ..isSelectedBackgroundImage = false;
+   
+     */
     notifty();
   }
 
-  void selectImage(String? image) {
+  String? getValueFromExpression(String expression) {
+    final match = RegExp(r'Color\((0x[a-fA-F0-9]+)\)').firstMatch(expression);
+    return match?.group(1);
+  }
+
+  void selectImage(String? image) async {
+    await CacheManager.instance.saveImage(image);
     homeViewModel
       ?..getImage(image)
       ..isSelectedBackgroundImage = true;

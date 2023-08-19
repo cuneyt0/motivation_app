@@ -11,6 +11,7 @@ import 'package:motivation_quotes/src/dictionaries/sport_quotes.dart';
 class BaseMotivationQuotes {
   static BaseMotivationQuotes? _instance;
   ListType? _listType;
+  String? _color;
 
   List<Motivation> get list {
     switch (_listType) {
@@ -28,7 +29,6 @@ class BaseMotivationQuotes {
         return quotesChangeAndDevelopment;
       case ListType.passion:
         return quotesPassion;
-
       default:
         return quotesGeneral;
     }
@@ -43,5 +43,9 @@ class BaseMotivationQuotes {
 
   void setListType(ListType? type) {
     _listType = type;
+  }
+
+  void setColor(String? color) {
+    _color = color;
   }
 }

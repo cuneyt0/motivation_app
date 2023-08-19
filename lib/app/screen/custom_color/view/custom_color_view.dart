@@ -67,7 +67,7 @@ class CustomColorView extends BaseViewProtocol<CustomColorViewModel> {
                     final color = consumer.allColors[index];
 
                     return InkWell(
-                      onTap: () => consumer.ontap(color),
+                      onTap: () async => await consumer.ontap(color),
                       child: Card(
                         color: color,
                         child: Center(
