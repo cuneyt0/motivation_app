@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -24,7 +22,6 @@ class HomeView extends BaseViewProtocol<HomeViewModel> {
 
   @override
   Widget startView(BuildContext context, ThemeManager theme) {
-    Random random = Random();
     return Consumer<HomeViewModel>(
       builder: (_, consumer, widget) {
         return Scaffold(
@@ -49,9 +46,12 @@ class HomeView extends BaseViewProtocol<HomeViewModel> {
               child: PageView.builder(
                 itemCount: consumer.dataList?.length,
                 scrollDirection: Axis.vertical,
+                onPageChanged: (value) {
+                  consumer.onPageChanged();
+                  print(
+                      ' consumer.dataList?[consumer.randomIndex].favorite ${consumer.dataList?[consumer.randomIndex].favorite}');
+                },
                 itemBuilder: (context, index) {
-                  int randomIndex =
-                      random.nextInt(consumer.dataList?.length ?? 1);
                   return Stack(
                     children: [
                       Column(
@@ -61,7 +61,7 @@ class HomeView extends BaseViewProtocol<HomeViewModel> {
                             padding:
                                 const EdgeInsets.only(left: 20.0, right: 20),
                             child: Text(
-                              '${consumer.dataList?[randomIndex].note}',
+                              '${consumer.dataList?[consumer.randomIndex].note}',
                               textAlign: TextAlign.center,
                               style: GoogleFonts.anekOdia(
                                   color: CustomTextColor.getTextColor(
@@ -73,7 +73,25 @@ class HomeView extends BaseViewProtocol<HomeViewModel> {
                                       .headlineMedium),
                             ),
                           ),
-                          Text('${consumer.dataList?[randomIndex].author}')
+                          Text(
+                              '${consumer.dataList?[consumer.randomIndex].author}'),
+                          Row(
+                            children: [
+                              Expanded(
+                                child: InkWell(
+                                  onTap: () => viewModel.changedFavorite(
+                                      '${consumer.dataList?[consumer.randomIndex].note}'),
+                                  child: Icon(
+                                    consumer.dataList?[consumer.randomIndex]
+                                                .favorite ==
+                                            true
+                                        ? Icons.favorite
+                                        : Icons.favorite_outline_outlined,
+                                  ),
+                                ),
+                              )
+                            ],
+                          )
                         ],
                       ),
                     ],

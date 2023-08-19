@@ -3,6 +3,8 @@ import 'package:motivation_quotes/app/screen/category/viewmodel/category_viewmod
 import 'package:motivation_quotes/app/screen/custom_color/route/custom_color_router.dart';
 import 'package:motivation_quotes/app/screen/custom_color/viewmodel/custom_color_viewmodel.dart';
 import 'package:motivation_quotes/app/screen/home/route/home_router.dart';
+import 'package:motivation_quotes/app/screen/my_favorite/route/my_favorite_router.dart';
+import 'package:motivation_quotes/app/screen/my_favorite/viewmodel/my_favorite_viewmodel.dart';
 import 'package:motivation_quotes/app/screen/splash/route/splash_router.dart';
 import 'package:motivation_quotes/app/screen/splash/viewmodel/splash_viewmodel.dart';
 import 'package:motivation_quotes/app/screen/text_style/route/text_style_router.dart';
@@ -25,5 +27,7 @@ class MultiProviderList {
         create: (context) => SplashViewModel(SplashRouter())),
     ChangeNotifierProvider(
         create: (context) => CustomColorViewModel(CustomColorRouter())),
+    ChangeNotifierProvider(
+        create: (context) => MyFavoriteViewModel(MyFavoriteRouter())),
   ];
 }

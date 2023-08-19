@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:motivation_quotes/app/model/motivation/motivation.dart';
 import 'package:motivation_quotes/core/utilities/cache_manager.dart';
@@ -21,8 +23,30 @@ class HomeViewModel extends BaseViewModel<HomeRouter> {
 
   String? get backgroundImage => _backgroundImage ?? '';
   String? _backgroundImage;
+  bool isFavorite = false;
+  final Random _random = Random();
+  int randomIndex = 0;
+
+  void onPageChanged() {
+    randomIndex = _random.nextInt(dataList?.length ?? 1);
+    notifty();
+  }
+
+  void changedFavorite(String? note) async {
+    if (dataList?[randomIndex].favorite == true) {
+      dataList?[randomIndex].favorite = false;
+    } else {
+      dataList?[randomIndex].favorite = true;
+      await CacheManager.instance.getFavorite();
+      await CacheManager.instance.saveFavorite('$note');
+      await CacheManager.instance.getFavorite();
+    }
+
+    notifty();
+  }
 
   void initVm() async {
+    await CacheManager.instance.getFavorite();
     switch (isSelectedBackgroundImage) {
       case false:
         _backgroundColor =
@@ -47,6 +71,7 @@ class HomeViewModel extends BaseViewModel<HomeRouter> {
         notifty();
         break;
       default:
+        router.showMyFavorite();
     }
     notifty();
   }

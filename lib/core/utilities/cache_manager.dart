@@ -13,6 +13,7 @@ enum ListType {
 
 class CacheManager {
   static CacheManager instance = CacheManager();
+  List<String> _itemList = [];
   final Future<SharedPreferences> _prefs = SharedPreferences.getInstance();
   Future<bool> saveType(ListType? type) async {
     BaseMotivationQuotes myInstance = BaseMotivationQuotes.getInstance();
@@ -102,7 +103,7 @@ class CacheManager {
   Future<bool?> getOption() async {
     final SharedPreferences prefs = await _prefs;
     var a = prefs.getBool(CacheManagerKey.option.toString());
-    print("$a");
+
     return a;
   }
 
@@ -112,13 +113,54 @@ class CacheManager {
     return true;
   }
 
+  Future<bool> saveFavorite(String data) async {
+    final SharedPreferences prefs = await _prefs;
+
+    if (_itemList.isNotEmpty == true) {
+      for (var element in _itemList) {
+        if (data == element) {
+          print("Eklenmedi");
+          return false;
+        } else {
+          print("Eşit Değil");
+          _itemList.add(data);
+          await prefs.setStringList(
+              CacheManagerKey.favorite.toString(), _itemList);
+          return true;
+        }
+      }
+    } else {
+      print("BOŞ");
+      _itemList.add(data);
+      await prefs.setStringList(CacheManagerKey.favorite.toString(), _itemList);
+      return true;
+    }
+
+    return true;
+  }
+
+  Future<List<String>?> getFavorite() async {
+    final SharedPreferences prefs = await _prefs;
+    var a = prefs.getStringList(CacheManagerKey.favorite.toString());
+    _itemList = a ?? [];
+    print("LİSTE ${a?.length}");
+    return a;
+  }
+
+  Future<bool> removeFavorite() async {
+    final SharedPreferences prefs = await _prefs;
+    prefs.remove(CacheManagerKey.favorite.toString());
+    return true;
+  }
+
   Future<bool> removeAllData() async {
     await removeTpe();
     await removeColor();
     await removeImage();
     await removeOption();
+    await removeFavorite();
     return true;
   }
 }
 
-enum CacheManagerKey { type, image, color, option }
+enum CacheManagerKey { type, image, color, option, favorite }
