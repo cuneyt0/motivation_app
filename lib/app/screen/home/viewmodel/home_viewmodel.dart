@@ -8,13 +8,14 @@ import '../route/home_router.dart';
 
 class HomeViewModel extends BaseViewModel<HomeRouter> {
   HomeViewModel(HomeRouter router) : super(router);
-  List<IconData> iconList = [
-    Icons.change_circle_outlined,
-    Icons.wb_incandescent_outlined,
-    Icons.brush_outlined,
-  ];
+  List<IconData> get iconList => [
+        Icons.change_circle_outlined,
+        Icons.wb_incandescent_outlined,
+        Icons.brush_outlined,
+      ];
+  List<Motivation>? dataList;
   int bottomNavIndex = 0;
-  Color get backgroundColor => _backgroundColor ?? Colors.white;
+  Color get backgroundColor => _backgroundColor ?? Colors.transparent;
   Color? _backgroundColor;
   bool? isSelectedBackgroundImage = false;
 
@@ -34,19 +35,6 @@ class HomeViewModel extends BaseViewModel<HomeRouter> {
     notifty();
   }
 
-  Color getColor(Color color) {
-    _backgroundColor = color;
-    notifty();
-    return backgroundColor;
-  }
-
-  String? getImage(String? path) {
-    _backgroundImage = path;
-
-    notifty();
-    return backgroundImage;
-  }
-
   onTap(int index) {
     bottomNavIndex = index;
     switch (bottomNavIndex) {
@@ -63,31 +51,19 @@ class HomeViewModel extends BaseViewModel<HomeRouter> {
     notifty();
   }
 
-  void changedState() async {
+  Future<void> changedState() async {
     dataList = BaseMotivationQuotes.getInstance().list;
+    isSelectedBackgroundImage = await CacheManager.instance.getOption();
     switch (isSelectedBackgroundImage) {
       case true:
         _backgroundImage = await CacheManager.instance.getImage();
         break;
       default:
+        _backgroundColor =
+            Color(int.tryParse('${await CacheManager.instance.getColor()}')!);
+        break;
     }
 
     notifty();
   }
-
-  Color? parseColorFromString(String colorString) {
-    final pattern = RegExp(r'0x[0-9a-f]+');
-    final match = pattern.firstMatch(colorString);
-
-    if (match != null) {
-      final colorValue = match.group(0);
-      final colorInt = int.parse(colorValue!, radix: 16);
-
-      return Color(colorInt);
-    }
-
-    return null; // Hata durumu için null
-  }
-
-  List<Motivation>? dataList;
 }

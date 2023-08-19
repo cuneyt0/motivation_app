@@ -10,6 +10,7 @@ class SplashViewModel extends BaseViewModel<SplashRouter> {
   SplashViewModel(SplashRouter router) : super(router);
 
   List<Motivation>? _dataList;
+  bool? _isSelectedBackgroundImage;
   void initVM() async {
     // await CacheManager.instance.removeAllData();
     Future.delayed(const Duration(milliseconds: 100)).then((value) async {
@@ -22,8 +23,11 @@ class SplashViewModel extends BaseViewModel<SplashRouter> {
 
       _dataList = BaseMotivationQuotes.getInstance().list;
       debugPrint('${_dataList?.length}');
+      _isSelectedBackgroundImage = await CacheManager.instance.getOption();
 
-      router.showHome(dataList: _dataList);
+      router.showHome(
+          dataList: _dataList,
+          isSelectedBackgroundImage: _isSelectedBackgroundImage);
     });
   }
 }

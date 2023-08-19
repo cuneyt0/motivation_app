@@ -92,10 +92,31 @@ class CacheManager {
     return true;
   }
 
+  Future<bool> saveOption(bool? option) async {
+    final SharedPreferences prefs = await _prefs;
+    await prefs.setBool(CacheManagerKey.option.toString(), option ?? false);
+
+    return true;
+  }
+
+  Future<bool?> getOption() async {
+    final SharedPreferences prefs = await _prefs;
+    var a = prefs.getBool(CacheManagerKey.option.toString());
+    print("$a");
+    return a;
+  }
+
+  Future<bool> removeOption() async {
+    final SharedPreferences prefs = await _prefs;
+    prefs.remove(CacheManagerKey.option.toString());
+    return true;
+  }
+
   Future<bool> removeAllData() async {
     await removeTpe();
     await removeColor();
     await removeImage();
+    await removeOption();
     return true;
   }
 }

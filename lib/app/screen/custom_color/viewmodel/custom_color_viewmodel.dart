@@ -12,54 +12,37 @@ class CustomColorViewModel extends BaseViewModel<CustomColorRouter> {
   HomeViewModel? homeViewModel;
   List<Color> get allColors => [...Colors.primaries, ...Colors.accents];
 
-  List<String> images = [
-    Assets.images.dock.path,
-    Assets.images.omid.path,
-    Assets.images.sitrika.path,
-    Assets.images.sanket.path,
-    Assets.images.sasha.path,
-    Assets.images.raamin.path,
-    Assets.images.manish.path,
-    Assets.images.vlad.path,
-  ];
+  List<String> get images => [
+        Assets.images.dock.path,
+        Assets.images.omid.path,
+        Assets.images.sitrika.path,
+        Assets.images.sanket.path,
+        Assets.images.sasha.path,
+        Assets.images.raamin.path,
+        Assets.images.manish.path,
+        Assets.images.vlad.path,
+      ];
 
   Future<void> ontap(Color color) async {
-    final value = getValueFromExpression(color.toString());
+    final value = _getValueFromExpression(color.toString());
     await CacheManager.instance.saveColor(value);
-    homeViewModel
-      ?..getColor(color)
-      ..isSelectedBackgroundImage = false
-      ..changedState();
+    await CacheManager.instance.saveOption(false);
+    homeViewModel?.changedState();
     router.close();
 
-    print(value);
-
-    /*homeViewModel
-      ?..isSelectedBackgroundImage = false
-      ..changedState();
-   */
-    /**
-     * 
-     * homeViewModel
-      ?..getColor(color)
-      ..isSelectedBackgroundImage = false;
-   
-     */
     notifty();
   }
 
-  String? getValueFromExpression(String expression) {
+  String? _getValueFromExpression(String expression) {
     final match = RegExp(r'Color\((0x[a-fA-F0-9]+)\)').firstMatch(expression);
     return match?.group(1);
   }
 
   void selectImage(String? image) async {
     await CacheManager.instance.saveImage(image);
-    homeViewModel
-      ?..getImage(image)
-      ..isSelectedBackgroundImage = true;
+    await CacheManager.instance.saveOption(true);
+    await homeViewModel?.changedState();
     router.close();
-    print(image);
     notifty();
   }
 }

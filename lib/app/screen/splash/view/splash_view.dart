@@ -21,11 +21,8 @@ class SplashView extends BaseViewProtocol<SplashViewModel> {
   Widget startView(BuildContext context, ThemeManager theme) {
     return Consumer<SplashViewModel>(
       builder: (_, consumer, widget) {
-        return Scaffold(
-          appBar: AppBar(
-            title: const Text("SplashPage"),
-          ),
-          body: Container(),
+        return const Scaffold(
+          body: CircularProgressIndicator.adaptive(),
         );
       },
     );
