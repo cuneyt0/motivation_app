@@ -1,93 +1,82 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:motivation_quotes/app/model/motivation/motivation.dart';
+import 'package:motivation_quotes/gen/locale_keys.g.dart';
 
 final List<Motivation> quotesSport = [
   Motivation(
-    note:
-        "Success is no accident. It is hard work, perseverance, learning, studying, sacrifice and most of all, love of what you are doing.",
+    note: LocaleKeys.motivation_list_sports_first.tr(),
     author: "Pelé",
   ),
   Motivation(
-    note: "Champions keep playing until they get it right.",
+    note: LocaleKeys.motivation_list_sports_second.tr(),
     author: "Billie Jean King",
   ),
   Motivation(
-    note: "The harder the battle, the sweeter the victory.",
+    note: LocaleKeys.motivation_list_sports_three.tr(),
     author: "Les Brown",
   ),
   Motivation(
-    note:
-        "Your body can stand almost anything. It's your mind that you have to convince.",
+    note: LocaleKeys.motivation_list_sports_four.tr(),
     author: "",
   ),
   Motivation(
-    note:
-        "Success is walking from failure to failure with no loss of enthusiasm.",
+    note: LocaleKeys.motivation_list_sports_five.tr(),
     author: "Winston Churchill",
   ),
   Motivation(
-    note:
-        "The only way to achieve the impossible is to believe it is possible.",
+    note: LocaleKeys.motivation_list_sports_six.tr(),
     author: "Charles Kingsleigh",
   ),
   Motivation(
-    note:
-        "Strength does not come from winning. Your struggles develop your strengths.",
+    note: LocaleKeys.motivation_list_sports_seven.tr(),
     author: "Arnold Schwarzenegger",
   ),
   Motivation(
-    note: "It's not whether you get knocked down, it's whether you get up.",
+    note: LocaleKeys.motivation_list_sports_eight.tr(),
     author: "Vince Lombardi",
   ),
   Motivation(
-    note: "You miss 100% of the shots you don't take.",
+    note: LocaleKeys.motivation_list_sports_nine.tr(),
     author: "Wayne Gretzky",
   ),
   Motivation(
-    note: "Don't watch the clock; do what it does. Keep going.",
+    note: LocaleKeys.motivation_list_sports_ten.tr(),
     author: "Sam Levenson",
   ),
   Motivation(
-    note:
-        "The difference between a successful person and others is not a lack of strength, not a lack of knowledge, but rather a lack in will.",
+    note: LocaleKeys.motivation_list_sports_eleven.tr(),
     author: "Vince Lombardi Jr.",
   ),
   Motivation(
-    note: "The future depends on what you do today.",
+    note: LocaleKeys.motivation_list_sports_twelve.tr(),
     author: "Mahatma Gandhi",
   ),
   Motivation(
-    note:
-        "I don't count my sit-ups; I only start counting when it starts hurting because they’re the only ones that count.",
+    note: LocaleKeys.motivation_list_sports_thirteen.tr(),
     author: " Muhammad Ali",
   ),
   Motivation(
-    note:
-        "I don't count my sit-ups; I only start counting when it starts hurting because they’re the only ones that count.",
-    author: " Muhammad Ali",
-  ),
-  Motivation(
-    note: "The pain you feel today will be the strength you feel tomorrow.",
+    note: LocaleKeys.motivation_list_sports_fourteen.tr(),
     author: "",
   ),
   Motivation(
-    note:
-        "Success usually comes to those who are too busy to be looking for it.",
+    note: LocaleKeys.motivation_list_sports_fifteen.tr(),
     author: "Henry David Thoreau",
   ),
   Motivation(
-    note: "It's not about the destination, it's about the journey.",
+    note: LocaleKeys.motivation_list_sports_sixteen.tr(),
     author: "",
   ),
   Motivation(
-    note: "Push yourself because no one else is going to do it for you.",
+    note: LocaleKeys.motivation_list_sports_seventeen.tr(),
     author: "",
   ),
   Motivation(
-    note: "Don't stop until you're proud.",
+    note: LocaleKeys.motivation_list_sports_eighteen.tr(),
     author: "",
   ),
   Motivation(
-    note: "The only bad workout is the one that didn't happen.",
+    note: LocaleKeys.motivation_list_sports_nineteen.tr(),
     author: "",
   ),
 ];

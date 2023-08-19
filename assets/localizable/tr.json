@@ -1,3 +1,48 @@
 {
-    "example": "Deneme"
+    "motivation_list": {
+        "sports": {
+            "first": "Başarı tesadüf değildir. Sıkı çalışma, azim, öğrenme, çalışma, fedakarlık ve en önemlisi yaptığınız işi sevmektir.",
+            "second": "Şampiyonlar doğru yapana kadar oynamaya devam ederler.",
+            "three": "Savaş ne kadar çetin olursa, zafer o kadar tatlı olur.",
+            "four": "Vücudunuz neredeyse her şeye dayanabilir. Asıl ikna etmeniz gereken zihninizdir.",
+            "five": "Başarı, hevesini kaybetmeden başarısızlıktan başarısızlığa yürümektir.",
+            "six": "İmkansızı başarmanın tek yolu, onun mümkün olduğuna inanmaktır.",
+            "seven": "Güç kazanmaktan gelmez. Mücadeleleriniz güçlü yanlarınızı geliştirir.",
+            "eight": "Önemli olan yıkılıp yıkılmadığınız değil, ayağa kalkıp kalkmadığınızdır.",
+            "nine": "Yapmadığın atışların %100'ünü kaçırırsın.",
+            "ten": "Saate bakma; ne yapıyorsa onu yap. Devam et.",
+            "eleven": "Başarılı bir insanla diğerleri arasındaki fark, güç eksikliği ya da bilgi eksikliği değil, irade eksikliğidir.",
+            "twelve": "Gelecek, bugün ne yaptığınıza bağlıdır.",
+            "thirteen": "Mekiklerimi saymıyorum; sadece canım acımaya başladığında saymaya başlıyorum çünkü sadece onlar sayılıyor.",
+            "fourteen": "Bugün hissettiğin acı, yarın hissettiğin güç olacak.",
+            "fifteen": "Başarı genellikle onu arayamayacak kadar meşgul olanlara gelir.",
+            "sixteen": "Önemli olan varış noktası değil, yolculuktur.",
+            "seventeen": "Kendinizi zorlayın çünkü başka kimse bunu sizin için yapmayacak.",
+            "eighteen": "Gurur duyana kadar durma.",
+            "nineteen": "Tek kötü antrenman, gerçekleşmemiş olandır."
+        },
+        "love": {
+            "first": "Aşk, ne kadar 'seni seviyorum' dediğinizle değil, bunun doğru olduğunu ne kadar kanıtladığınızla ilgilidir.",
+            "second": "Hayatta tutunacak en iyi şey birbirimizdir.",
+            "three": "Aşk, iki bedende yaşayan tek bir ruhtan oluşur.",
+            "four": "Aşk aritmetiğinde, bir artı bir her şeye eşittir.",
+            "five": "Hayatın en büyük mutluluğu sevildiğimize inanmaktır.",
+            "six": "Büyük hayaller kurun ve başarısız olmaya cesaret edin.",
+            "seven": "Aşk sonsuz bir bağışlama eylemidir. Alışkanlık haline gelen şefkatli bir bakış.",
+            "eight": "Aşk bulduğunuz bir şey değildir. Aşk sizi bulan bir şeydir.",
+            "nine": "Sevmek ve sevilmek, güneşi her iki taraftan da hissetmektir.",
+            "ten": "Aşk rüzgar gibidir, onu göremezsiniz ama hissedebilirsiniz.",
+            "eleven": "Hayatı ilginç kılan zorluklar, onların üstesinden gelmek ise hayatı anlamlı kılan şeydir.",
+            "twelve": "Sevgi, bir düşmanı dosta dönüştürebilecek tek güçtür.",
+            "thirteen": "Sevgi, mutluluğun kapılarını açan ana anahtardır.",
+            "fourteen": "Aşk bulduğunuz bir şey değildir. Aşk sizi bulan bir şeydir.",
+            "fifteen": "Birine verebileceğiniz en büyük hediye zamanınız, dikkatiniz, sevginiz ve ilginizdir.",
+            "sixteen": "Biri tarafından derinden sevilmek size güç verir, birini derinden sevmek ise size cesaret verir.",
+            "seventeen": "Aşk sahip olmakla ilgili değildir. Sevgi takdir etmektir.",
+            "eighteen": "Aşk dünyayı döndürmez. Aşk, yolculuğu değerli kılan şeydir.",
+            "nineteen": "Başarılı bir evlilik, hep aynı kişiye defalarca aşık olmayı gerektirir.",
+            "twenty": "Aşk ruhun güzelliğidir.",
+            "twenty_one": "Aşk, diğer kişinin mutluluğunun sizin mutluluğunuzdan daha önemli olmasıdır"
+        }
+    }
 }

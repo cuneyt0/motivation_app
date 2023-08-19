@@ -1,107 +1,90 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:motivation_quotes/app/model/motivation/motivation.dart';
+import 'package:motivation_quotes/gen/locale_keys.g.dart';
 
 final List<Motivation> quotesLove = [
   Motivation(
-    note:
-        "Love is not about how much you say 'I love you,' but how much you prove that it's true.",
+    note: LocaleKeys.motivation_list_love_first.tr(),
     author: "",
   ),
   Motivation(
-    note: "The best thing to hold onto in life is each other.",
+    note: LocaleKeys.motivation_list_love_second.tr(),
     author: "Audrey Hepburn",
   ),
   Motivation(
-    note: "Love is composed of a single soul inhabiting two bodies.",
+    note: LocaleKeys.motivation_list_love_three.tr(),
     author: "Aristotle",
   ),
   Motivation(
-    note: " In the arithmetic of love, one plus one equals everything.",
+    note: LocaleKeys.motivation_list_love_four.tr(),
     author: "Mignon McLaughlin",
   ),
   Motivation(
-    note: "The greatest happiness of life is the conviction that we are loved.",
+    note: LocaleKeys.motivation_list_love_five.tr(),
     author: "Mahatma Gandhi",
   ),
   Motivation(
-    note: "Dream big and dare to fail.",
+    note: LocaleKeys.motivation_list_love_six.tr(),
     author: " Victor Hugo",
   ),
   Motivation(
-    note:
-        "Love is an endless act of forgiveness. A tender look which becomes a habit.",
+    note: LocaleKeys.motivation_list_love_seven.tr(),
     author: "Peter Ustinov",
   ),
   Motivation(
-    note: "Love is not something you find. Love is something that finds you.",
+    note: LocaleKeys.motivation_list_love_eight.tr(),
     author: "Loretta Young",
   ),
   Motivation(
-    note: "To love and be loved is to feel the sun from both sides.",
+    note: LocaleKeys.motivation_list_love_nine.tr(),
     author: "David Viscott",
   ),
   Motivation(
-    note: "Love is like the wind, you can't see it but you can feel it.",
+    note: LocaleKeys.motivation_list_love_ten.tr(),
     author: "Nicholas Sparks",
   ),
   Motivation(
-    note:
-        "Challenges are what make life interesting and overcoming them is what makes life meaningful.",
+    note: LocaleKeys.motivation_list_love_eleven.tr(),
     author: "Dr. Seuss",
   ),
   Motivation(
-    note:
-        "Love is the only force capable of transforming an enemy into a friend.",
+    note: LocaleKeys.motivation_list_love_twelve.tr(),
     author: "Steve Jobs",
   ),
   Motivation(
-    note: "Love is the master key that opens the gates of happiness.",
+    note: LocaleKeys.motivation_list_love_thirteen.tr(),
     author: "Oliver Wendell Holmes Sr.",
   ),
   Motivation(
-    note: "Love isn't something you find. Love is something that finds you.",
+    note: LocaleKeys.motivation_list_love_fourteen.tr(),
     author: "Loretta Young",
   ),
   Motivation(
-    note:
-        "The greatest gift you can give someone is your time, your attention, your love, and your concern.",
+    note: LocaleKeys.motivation_list_love_fifteen.tr(),
     author: "",
   ),
   Motivation(
-    note:
-        "The greatest gift you can give someone is your time, your attention, your love, and your concern.",
-    author: "",
-  ),
-  Motivation(
-    note:
-        "Being deeply loved by someone gives you strength, while loving someone deeply gives you courage.",
+    note: LocaleKeys.motivation_list_love_sixteen.tr(),
     author: "Lao Tzu",
   ),
   Motivation(
-    note: "Love is not about possession. Love is about appreciation.",
+    note: LocaleKeys.motivation_list_love_seventeen.tr(),
     author: "",
   ),
   Motivation(
-    note:
-        "Love doesn't make the world go 'round. Love is what makes the ride worthwhile.",
+    note: LocaleKeys.motivation_list_love_eighteen.tr(),
     author: "Franklin P. Jones",
   ),
   Motivation(
-    note:
-        "A successful marriage requires falling in love many times, always with the same person.",
+    note: LocaleKeys.motivation_list_love_nineteen.tr(),
     author: "Mignon McLaughlin",
   ),
   Motivation(
-    note:
-        "A successful marriage requires falling in love many times, always with the same person.",
-    author: "Mignon McLaughlin",
-  ),
-  Motivation(
-    note: "Love is the beauty of the soul.",
+    note: LocaleKeys.motivation_list_love_twenty.tr(),
     author: "Saint Augustine",
   ),
   Motivation(
-    note:
-        "Love is when the other person's happiness is more important than your own",
+    note: LocaleKeys.motivation_list_love_twenty_one.tr(),
     author: "H. Jackson Brown Jr.",
   ),
 ];

@@ -15,9 +15,6 @@ class $AssetsImagesGen {
   /// File path: assets/images/dock.jpg
   AssetGenImage get dock => const AssetGenImage('assets/images/dock.jpg');
 
-  /// File path: assets/images/kiljoy.png
-  AssetGenImage get kiljoy => const AssetGenImage('assets/images/kiljoy.png');
-
   /// File path: assets/images/manish.jpg
   AssetGenImage get manish => const AssetGenImage('assets/images/manish.jpg');
 
@@ -41,7 +38,7 @@ class $AssetsImagesGen {
 
   /// List of all assets
   List<AssetGenImage> get values =>
-      [dock, kiljoy, manish, omid, raamin, sanket, sasha, sitrika, vlad];
+      [dock, manish, omid, raamin, sanket, sasha, sitrika, vlad];
 }
 
 class $AssetsLocalizableGen {
