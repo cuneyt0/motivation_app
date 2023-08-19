@@ -43,6 +43,38 @@
             "nineteen": "A successful marriage requires falling in love many times, always with the same person.",
             "twenty": "Love is the beauty of the soul.",
             "twenty_one": "Love is when the other person's happiness is more important than your own"
+        },
+        "positiveThinking": {
+            "first": "Your mind is a powerful thing. When you fill it with positive thoughts, your life will start to change.",
+            "second": "A positive attitude can really make dreams come true - it did for me.",
+            "three": "The only limit to our realization of tomorrow will be our doubts of today.",
+            "four": "Positive thinking will let you do everything better than negative thinking will.",
+            "five": "Your attitude determines your direction.",
+            "six": "When you change your thoughts, you change your world.",
+            "seven": "The only way to do great work is to love what you do.",
+            "eight": "In the middle of every difficulty lies opportunity.",
+            "nine": "Optimism is the faith that leads to achievement"
+        },
+        "passion": {
+            "first": "Passion is energy. Feel the power that comes from focusing on what excites you.",
+            "second": "Follow your passion. It will lead you to your purpose.",
+            "three": "Passion is the genesis of genius.",
+            "four": "Passion is the driving force that brings dreams to reality.",
+            "five": "Without passion, you don’t have energy; without energy, you have nothing. Nothing great in the world has been accomplished without passion.",
+            "six": "Passion is the key to success. If you love what you are doing, you will be successful.",
+            "seven": "Passion first and everything will fall into place.",
+            "eight": "Passion is the bridge that takes you from pain to change.",
+            "nine": "Follow your passion, be prepared to work hard and sacrifice, and, above all, don't let anyone limit your dreams.",
+            "ten": "Do what you love, and you will never have to work a day in your life.",
+            "eleven": "Passion is the fire that drives us to express who we really are.",
+            "twelve": "Passion is the oxygen of the soul.",
+            "thirteen": "The only way to do great work is to love what you do.",
+            "fourteen": "Passion is not limited to a single activity; it's an attitude that influences everything you do.",
+            "fifteen": "Passion is the fuel in the engine of your life.",
+            "sixteen": "Passion is the elixir that turns the ordinary into the extraordinary.",
+            "seventeen": "Passion is the spark that ignites the fire of creativity.",
+            "eighteen": "Passion makes the impossible possible.",
+            "nineteen": "Passion is the heartbeat of a purposeful life."
         }
     }
 }

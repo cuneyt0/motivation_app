@@ -43,6 +43,36 @@ abstract class  LocaleKeys {
   static const motivation_list_love_twenty = 'motivation_list.love.twenty';
   static const motivation_list_love_twenty_one = 'motivation_list.love.twenty_one';
   static const motivation_list_love = 'motivation_list.love';
+  static const motivation_list_positiveThinking_first = 'motivation_list.positiveThinking.first';
+  static const motivation_list_positiveThinking_second = 'motivation_list.positiveThinking.second';
+  static const motivation_list_positiveThinking_three = 'motivation_list.positiveThinking.three';
+  static const motivation_list_positiveThinking_four = 'motivation_list.positiveThinking.four';
+  static const motivation_list_positiveThinking_five = 'motivation_list.positiveThinking.five';
+  static const motivation_list_positiveThinking_six = 'motivation_list.positiveThinking.six';
+  static const motivation_list_positiveThinking_seven = 'motivation_list.positiveThinking.seven';
+  static const motivation_list_positiveThinking_eight = 'motivation_list.positiveThinking.eight';
+  static const motivation_list_positiveThinking_nine = 'motivation_list.positiveThinking.nine';
+  static const motivation_list_positiveThinking = 'motivation_list.positiveThinking';
+  static const motivation_list_passion_first = 'motivation_list.passion.first';
+  static const motivation_list_passion_second = 'motivation_list.passion.second';
+  static const motivation_list_passion_three = 'motivation_list.passion.three';
+  static const motivation_list_passion_four = 'motivation_list.passion.four';
+  static const motivation_list_passion_five = 'motivation_list.passion.five';
+  static const motivation_list_passion_six = 'motivation_list.passion.six';
+  static const motivation_list_passion_seven = 'motivation_list.passion.seven';
+  static const motivation_list_passion_eight = 'motivation_list.passion.eight';
+  static const motivation_list_passion_nine = 'motivation_list.passion.nine';
+  static const motivation_list_passion_ten = 'motivation_list.passion.ten';
+  static const motivation_list_passion_eleven = 'motivation_list.passion.eleven';
+  static const motivation_list_passion_twelve = 'motivation_list.passion.twelve';
+  static const motivation_list_passion_thirteen = 'motivation_list.passion.thirteen';
+  static const motivation_list_passion_fourteen = 'motivation_list.passion.fourteen';
+  static const motivation_list_passion_fifteen = 'motivation_list.passion.fifteen';
+  static const motivation_list_passion_sixteen = 'motivation_list.passion.sixteen';
+  static const motivation_list_passion_seventeen = 'motivation_list.passion.seventeen';
+  static const motivation_list_passion_eighteen = 'motivation_list.passion.eighteen';
+  static const motivation_list_passion_nineteen = 'motivation_list.passion.nineteen';
+  static const motivation_list_passion = 'motivation_list.passion';
   static const motivation_list = 'motivation_list';
 
 }

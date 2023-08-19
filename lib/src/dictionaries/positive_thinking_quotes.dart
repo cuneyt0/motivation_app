@@ -1,48 +1,42 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:motivation_quotes/app/model/motivation/motivation.dart';
+import 'package:motivation_quotes/gen/locale_keys.g.dart';
 
 final List<Motivation> quotesPositiveThinking = [
   Motivation(
-    note:
-        "Your mind is a powerful thing. When you fill it with positive thoughts, your life will start to change.",
+    note: LocaleKeys.motivation_list_positiveThinking_first.tr(),
     author: "",
   ),
   Motivation(
-    note:
-        "A positive attitude can really make dreams come true - it did for me.",
+    note: LocaleKeys.motivation_list_positiveThinking_second.tr(),
     author: "David Bailey",
   ),
   Motivation(
-    note:
-        "The only limit to our realization of tomorrow will be our doubts of today.",
+    note: LocaleKeys.motivation_list_positiveThinking_three.tr(),
     author: "Franklin D. Roosevelt",
   ),
   Motivation(
-    note:
-        "Positive thinking will let you do everything better than negative thinking will.",
+    note: LocaleKeys.motivation_list_positiveThinking_four.tr(),
     author: "Zig Ziglar",
   ),
   Motivation(
-    note: "Your attitude determines your direction.",
+    note: LocaleKeys.motivation_list_positiveThinking_five.tr(),
     author: "Zig Ziglar",
   ),
   Motivation(
-    note: "When you change your thoughts, you change your world.",
+    note: LocaleKeys.motivation_list_positiveThinking_six.tr(),
     author: "Norman Vincent Peale",
   ),
   Motivation(
-    note: "The only way to do great work is to love what you do.",
+    note: LocaleKeys.motivation_list_positiveThinking_seven.tr(),
     author: "Steve Jobs",
   ),
   Motivation(
-    note: "Don't watch the clock; do what it does. Keep going.",
-    author: "Sam Levenson",
-  ),
-  Motivation(
-    note: "In the middle of every difficulty lies opportunity.",
+    note: LocaleKeys.motivation_list_positiveThinking_eight.tr(),
     author: "Albert Einstein",
   ),
   Motivation(
-    note: "Optimism is the faith that leads to achievement",
+    note: LocaleKeys.motivation_list_positiveThinking_nine.tr(),
     author: "",
   ),
 ];

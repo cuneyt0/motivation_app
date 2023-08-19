@@ -43,6 +43,38 @@
             "nineteen": "Başarılı bir evlilik, hep aynı kişiye defalarca aşık olmayı gerektirir.",
             "twenty": "Aşk ruhun güzelliğidir.",
             "twenty_one": "Aşk, diğer kişinin mutluluğunun sizin mutluluğunuzdan daha önemli olmasıdır"
+        },
+        "positiveThinking": {
+            "first": "Zihniniz güçlü bir şeydir. Onu olumlu düşüncelerle doldurduğunuzda, hayatınız değişmeye başlayacaktır.",
+            "second": "Olumlu bir tutum gerçekten de hayallerin gerçekleşmesini sağlayabilir - benim için öyle oldu.",
+            "three": "Yarını gerçekleştirmemizin tek sınırı bugüne dair şüphelerimiz olacaktır.",
+            "four": "Olumlu düşünmek, her şeyi olumsuz düşünmekten daha iyi yapmanızı sağlayacaktır.",
+            "five": "Tutumunuz yönünüzü belirler.",
+            "six": "Düşüncelerinizi değiştirdiğinizde, dünyanızı da değiştirirsiniz.",
+            "seven": "Harika işler yapmanın tek yolu yaptığınız işi sevmektir.",
+            "eight": "Her zorluğun ortasında bir fırsat yatar.",
+            "nine": "İyimserlik başarıya götüren inançtır"
+        },
+        "passion": {
+            "first": "Tutku enerjidir. Sizi heyecanlandıran şeylere odaklanmaktan gelen gücü hissedin.",
+            "second": "Tutkunuzu takip edin. O sizi amacınıza götürecektir.",
+            "three": "Tutku, dehanın doğuşudur.",
+            "four": "Tutku, hayalleri gerçeğe dönüştüren itici güçtür.",
+            "five": "Tutku olmadan enerjiniz olmaz; enerji olmadan da hiçbir şeyiniz olmaz. Dünyada tutku olmadan başarılmış büyük bir şey yoktur.",
+            "six": "Tutku başarının anahtarıdır. Eğer yaptığınız işi seviyorsanız, başarılı olursunuz.",
+            "seven": "Önce tutku, sonra her şey yerli yerine oturacaktır.",
+            "eight": "Tutku, sizi acıdan değişime götüren köprüdür.",
+            "nine": "Tutkunuzun peşinden gidin, çok çalışmaya ve fedakarlık yapmaya hazır olun ve her şeyden önce kimsenin hayallerinizi sınırlamasına izin vermeyin.",
+            "ten": "Sevdiğiniz işi yapın, hayatınız boyunca bir gün bile çalışmak zorunda kalmazsınız.",
+            "eleven": "Tutku, bizi gerçekte kim olduğumuzu ifade etmeye iten ateştir.",
+            "twelve": "Tutku ruhun oksijenidir.",
+            "thirteen": "Harika işler yapmanın tek yolu yaptığınız işi sevmektir.",
+            "fourteen": "Tutku tek bir faaliyetle sınırlı değildir; yaptığınız her şeyi etkileyen bir tutumdur.",
+            "fifteen": "Tutku, hayatınızın motorundaki yakıttır.",
+            "sixteen": "Tutku, sıradan olanı sıra dışı hale getiren iksirdir.",
+            "seventeen": "Tutku, yaratıcılık ateşini tutuşturan kıvılcımdır.",
+            "eighteen": "Tutku imkânsızı mümkün kılar.",
+            "nineteen": "Tutku, amaçlı bir yaşamın kalp atışlarıdır."
         }
     }
 }

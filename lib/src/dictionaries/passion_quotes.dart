@@ -1,92 +1,82 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:motivation_quotes/app/model/motivation/motivation.dart';
+import 'package:motivation_quotes/gen/locale_keys.g.dart';
 
 final List<Motivation> quotesPassion = [
   Motivation(
-    note:
-        "Passion is energy. Feel the power that comes from focusing on what excites you.",
+    note: LocaleKeys.motivation_list_passion_first.tr(),
     author: "Oprah Winfrey",
   ),
   Motivation(
-    note: "Follow your passion. It will lead you to your purpose.",
+    note: LocaleKeys.motivation_list_passion_second.tr(),
     author: "Oprah Winfrey",
   ),
   Motivation(
-    note: "Passion is the genesis of genius.",
+    note: LocaleKeys.motivation_list_passion_three.tr(),
     author: "Tony Robbins",
   ),
   Motivation(
-    note: "Passion is the driving force that brings dreams to reality.",
-    author: "Tony Robbins",
-  ),
-  Motivation(
-    note:
-        "Without passion, you don’t have energy; without energy, you have nothing. Nothing great in the world has been accomplished without passion.",
+    note: LocaleKeys.motivation_list_passion_four.tr(),
     author: "Donald Trump",
   ),
   Motivation(
-    note:
-        "Passion is the key to success. If you love what you are doing, you will be successful.",
+    note: LocaleKeys.motivation_list_passion_five.tr(),
     author: "Albert Schweitzer",
   ),
   Motivation(
-    note: "Passion first and everything will fall into place.",
+    note: LocaleKeys.motivation_list_passion_six.tr(),
     author: "Holly Holm",
   ),
   Motivation(
-    note: "Passion is the bridge that takes you from pain to change.",
+    note: LocaleKeys.motivation_list_passion_seven.tr(),
     author: "Frida Kahlo",
   ),
   Motivation(
-    note:
-        "Passion is energy. Feel the power that comes from focusing on what excites you.",
+    note: LocaleKeys.motivation_list_passion_eight.tr(),
     author: "Oprah Winfrey",
   ),
   Motivation(
-    note:
-        "Follow your passion, be prepared to work hard and sacrifice, and, above all, don't let anyone limit your dreams.",
-    author: "Donovan Bailey",
+    note: LocaleKeys.motivation_list_passion_nine.tr(),
+    author: "Donovan Baile",
   ),
   Motivation(
-    note:
-        "Do what you love, and you will never have to work a day in your life.",
+    note: LocaleKeys.motivation_list_passion_ten.tr(),
     author: "Confucius",
   ),
   Motivation(
-    note: "Passion is the fire that drives us to express who we really are.",
+    note: LocaleKeys.motivation_list_passion_eleven.tr(),
     author: "",
   ),
   Motivation(
-    note: "Passion is the oxygen of the soul.",
+    note: LocaleKeys.motivation_list_passion_twelve.tr(),
     author: "Bill Butler",
   ),
   Motivation(
-    note: "The only way to do great work is to love what you do.",
+    note: LocaleKeys.motivation_list_passion_thirteen.tr(),
     author: "Steve Jobs",
   ),
   Motivation(
-    note:
-        "Passion is not limited to a single activity; it's an attitude that influences everything you do.",
+    note: LocaleKeys.motivation_list_passion_fourteen.tr(),
     author: "",
   ),
   Motivation(
-    note: "Passion is the fuel in the engine of your life.",
+    note: LocaleKeys.motivation_list_passion_fifteen.tr(),
     author: "",
   ),
   Motivation(
-    note:
-        "Passion is the elixir that turns the ordinary into the extraordinary.",
+    note: LocaleKeys.motivation_list_passion_sixteen.tr(),
     author: "",
   ),
   Motivation(
-    note: "Passion is the spark that ignites the fire of creativity.",
+    note: LocaleKeys.motivation_list_passion_seventeen.tr(),
     author: "",
   ),
   Motivation(
-    note: "Passion makes the impossible possible.",
+    note: LocaleKeys.motivation_list_passion_eighteen.tr(),
     author: "",
   ),
   Motivation(
-    note: "Passion is the heartbeat of a purposeful life.",
+    note: LocaleKeys.motivation_list_passion_nineteen.tr(),
     author: "",
   ),
 ];
