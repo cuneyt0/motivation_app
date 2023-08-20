@@ -1,4 +1,6 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:motivation_quotes/app/model/motivation/motivation.dart';
+import 'package:motivation_quotes/gen/locale_keys.g.dart';
 import 'package:motivation_quotes/src/dictionaries/change_and_development.dart';
 import 'package:motivation_quotes/src/dictionaries/education_quotes.dart';
 import 'package:motivation_quotes/src/dictionaries/passion_quotes.dart';
@@ -8,93 +10,59 @@ import 'package:motivation_quotes/src/dictionaries/sport_quotes.dart';
 
 final List<Motivation> quotesGeneral = [
   Motivation(
-    note: "Believe you can and you're halfway there.",
+    note: LocaleKeys.motivation_list_general_first.tr(),
     author: "Theodore Roosevelt",
   ),
   Motivation(
-    note: "The only way to do great work is to love what you do.",
+    note: LocaleKeys.motivation_list_general_second.tr(),
     author: "Steve Jobs",
   ),
   Motivation(
-    note:
-        "Success is not final, failure is not fatal: It is the courage to continue that counts.",
+    note: LocaleKeys.motivation_list_general_three.tr(),
     author: "Winston Churchill",
   ),
   Motivation(
-    note: " The future depends on what you do today.",
+    note: LocaleKeys.motivation_list_general_four.tr(),
     author: "Mahatma Gandhi",
   ),
   Motivation(
-    note: " The future depends on what you do today.",
-    author: "Mahatma Gandhi",
-  ),
-  Motivation(
-    note: "Dream big and dare to fail.",
-    author: "Norman Vaughan",
-  ),
-  Motivation(
-    note: "In the middle of every difficulty lies opportunity.",
+    note: LocaleKeys.motivation_list_general_five.tr(),
     author: "Albert Einstein",
   ),
   Motivation(
-    note: "You are never too old to set another goal or to dream a new dream.",
-    author: "Albert Einstein",
-  ),
-  Motivation(
-    note:
-        "The harder you work for something, the greater you'll feel when you achieve it.",
+    note: LocaleKeys.motivation_list_general_six.tr(),
     author: "",
   ),
   Motivation(
-    note: "Difficult roads often lead to beautiful destinations.",
-    author: "",
-  ),
-  Motivation(
-    note:
-        "Challenges are what make life interesting and overcoming them is what makes life meaningful.",
-    author: "",
-  ),
-  Motivation(
-    note: "Your time is limited, don't waste it living someone else's life.",
+    note: LocaleKeys.motivation_list_general_seven.tr(),
     author: "Steve Jobs",
   ),
   Motivation(
-    note: "Stay patient and trust your journey.",
+    note: LocaleKeys.motivation_list_general_eight.tr(),
     author: "",
   ),
   Motivation(
-    note: "Life is 10% what happens to us and 90% how we react to it.",
+    note: LocaleKeys.motivation_list_general_nine.tr(),
     author: "Charles R. Swindoll",
   ),
   Motivation(
-    note: "The secret to getting ahead is getting started.",
+    note: LocaleKeys.motivation_list_general_ten.tr(),
     author: "Mark Twain",
   ),
   Motivation(
-    note: "Don't watch the clock; do what it does. Keep going.",
-    author: "Sam Levenson",
-  ),
-  Motivation(
-    note:
-        "Success is walking from failure to failure with no loss of enthusiasm.",
-    author: "Winston Churchill",
-  ),
-  Motivation(
-    note:
-        "The only limit to our realization of tomorrow will be our doubts of today",
+    note: LocaleKeys.motivation_list_general_eleven.tr(),
     author: "Franklin D. Roosevelt",
   ),
   Motivation(
-    note:
-        "You are the driver of your own life, don't let anyone steal your seat.",
+    note: LocaleKeys.motivation_list_general_twelve.tr(),
     author: "",
   ),
   Motivation(
-    note: "Embrace the uncertainty, it's where the magic happens.",
+    note: LocaleKeys.motivation_list_general_thirteen.tr(),
     author: "",
   ),
   Motivation(
-    note: "Every day may not be good, but there's something good in every day.",
+    note: LocaleKeys.motivation_list_general_fourteen.tr(),
     author: "",
   ),
   ...quotesEducation,

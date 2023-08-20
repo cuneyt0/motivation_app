@@ -1,99 +1,82 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:motivation_quotes/app/model/motivation/motivation.dart';
+import 'package:motivation_quotes/gen/locale_keys.g.dart';
 
 final List<Motivation> quotesChangeAndDevelopment = [
   Motivation(
-    note:
-        "The only way to make sense out of change is to plunge into it, move with it, and join the dance.",
+    note: LocaleKeys.motivation_list_changeAndDevelopment_first.tr(),
     author: "Alan Watts",
   ),
   Motivation(
-    note:
-        "Change is the essence of life; be willing to surrender what you are for what you could become.",
+    note: LocaleKeys.motivation_list_changeAndDevelopment_second.tr(),
     author: "Reinhold Niebuhr",
   ),
   Motivation(
-    note:
-        "Don't fear change. You may lose something good, but you may also gain something great.",
+    note: LocaleKeys.motivation_list_changeAndDevelopment_three.tr(),
     author: "",
   ),
   Motivation(
-    note:
-        "The secret of change is to focus all your energy not on fighting the old, but on building the new.",
+    note: LocaleKeys.motivation_list_changeAndDevelopment_four.tr(),
     author: "Socrates",
   ),
   Motivation(
-    note:
-        "Progress is impossible without change, and those who cannot change their minds cannot change anything.",
+    note: LocaleKeys.motivation_list_changeAndDevelopment_five.tr(),
     author: "George Bernard Shaw",
   ),
   Motivation(
-    note:
-        "Embrace uncertainty. Some of the most beautiful chapters in our lives won't have a title until much later.",
+    note: LocaleKeys.motivation_list_changeAndDevelopment_six.tr(),
     author: "",
   ),
   Motivation(
-    note: "Change your thoughts and you change your world.",
+    note: LocaleKeys.motivation_list_changeAndDevelopment_seven.tr(),
     author: "Norman Vincent Peale",
   ),
   Motivation(
-    note:
-        "Life is a series of natural and spontaneous changes. Don't resist them; that only creates sorrow. Let reality be reality. Let things flow naturally forward in whatever way they like.",
+    note: LocaleKeys.motivation_list_changeAndDevelopment_eight.tr(),
     author: "Lao Tzu",
   ),
   Motivation(
-    note:
-        "Life is a series of natural and spontaneous changes. Don't resist them; that only creates sorrow. Let reality be reality. Let things flow naturally forward in whatever way they like.",
+    note: LocaleKeys.motivation_list_changeAndDevelopment_nine.tr(),
     author: "",
   ),
   Motivation(
-    note:
-        "The harder you work for something, the greater you'll feel when you achieve it.",
+    note: LocaleKeys.motivation_list_changeAndDevelopment_ten.tr(),
     author: "",
   ),
   Motivation(
-    note:
-        "Don't wait for the 'perfect' moment. Take the moment and make it 'perfect'.",
+    note: LocaleKeys.motivation_list_changeAndDevelopment_eleven.tr(),
     author: "",
   ),
   Motivation(
-    note: "Your life does not get better by chance, it gets better by change.",
+    note: LocaleKeys.motivation_list_changeAndDevelopment_twelve.tr(),
     author: "",
   ),
   Motivation(
-    note: "Every great achievement was once considered impossible.",
+    note: LocaleKeys.motivation_list_changeAndDevelopment_thirteen.tr(),
     author: "",
   ),
   Motivation(
-    note:
-        "Change may be challenging, but it is also the catalyst for growth and progress.",
-    author: "",
-  ),
-  Motivation(
-    note:
-        "The only person you are destined to become is the person you decide to be.",
+    note: LocaleKeys.motivation_list_changeAndDevelopment_fourteen.tr(),
     author: "Ralph Waldo Emerson",
   ),
   Motivation(
-    note:
-        "Change is the pathway to growth and evolution. Embrace it and let it fuel your journey.",
+    note: LocaleKeys.motivation_list_changeAndDevelopment_fifteen.tr(),
     author: "",
   ),
   Motivation(
-    note: "Don't be afraid to give up the good to go for the great.",
+    note: LocaleKeys.motivation_list_changeAndDevelopment_sixteen.tr(),
     author: "John D. Rockefeller",
   ),
   Motivation(
-    note:
-        "The butterfly doesn't know what it will become, but it embraces the change and emerges beautifully.",
+    note: LocaleKeys.motivation_list_changeAndDevelopment_seventeen.tr(),
     author: "",
   ),
   Motivation(
-    note:
-        "Success is not final, failure is not fatal: It is the courage to continue that counts.",
+    note: LocaleKeys.motivation_list_changeAndDevelopment_eighteen.tr(),
     author: "Winston Churchill",
   ),
   Motivation(
-    note: "Change is inevitable. Growth is optional. Choose wisely",
+    note: LocaleKeys.motivation_list_changeAndDevelopment_nineteen.tr(),
     author: "",
   ),
 ];

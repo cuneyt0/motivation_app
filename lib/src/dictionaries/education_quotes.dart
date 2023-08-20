@@ -1,89 +1,86 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:motivation_quotes/app/model/motivation/motivation.dart';
+import 'package:motivation_quotes/gen/locale_keys.g.dart';
 
 final List<Motivation> quotesEducation = [
   Motivation(
-    note:
-        "Education is the most powerful weapon which you can use to change the world.",
+    note: LocaleKeys.motivation_list_education_first.tr(),
     author: "Nelson Mandela",
   ),
   Motivation(
-    note:
-        "The beautiful thing about learning is that no one can take it away from you.",
+    note: LocaleKeys.motivation_list_education_second.tr(),
     author: "B.B. King",
   ),
   Motivation(
-    note: "The expert in anything was once a beginner.",
+    note: LocaleKeys.motivation_list_education_three.tr(),
     author: "Helen Hayes",
   ),
   Motivation(
-    note: "The only way to learn mathematics is to do mathematics.",
+    note: LocaleKeys.motivation_list_education_four.tr(),
     author: "Paul Halmos",
   ),
   Motivation(
-    note: "Learning is a treasure that will follow its owner everywhere.",
+    note: LocaleKeys.motivation_list_education_five.tr(),
     author: "Chinese Proverb",
   ),
   Motivation(
-    note: "Education is not the filling of a pail, but the lighting of a fire.",
+    note: LocaleKeys.motivation_list_education_six.tr(),
     author: "W.B. Yeats",
   ),
   Motivation(
-    note: "Success is the sum of small efforts, repeated day in and day out.",
+    note: LocaleKeys.motivation_list_education_seven.tr(),
     author: "Robert Collier",
   ),
   Motivation(
-    note: "The roots of education are bitter, but the fruit is sweet.",
+    note: LocaleKeys.motivation_list_education_eight.tr(),
     author: "Aristotle",
   ),
   Motivation(
-    note: "Strive for progress, not perfection.",
+    note: LocaleKeys.motivation_list_education_nine.tr(),
     author: "",
   ),
   Motivation(
-    note: "Education is not preparation for life; education is life itself.",
+    note: LocaleKeys.motivation_list_education_ten.tr(),
     author: "John Dewey",
   ),
   Motivation(
-    note:
-        "The more that you read, the more things you will know. The more that you learn, the more places you'll go.",
+    note: LocaleKeys.motivation_list_education_eleven.tr(),
     author: "Dr. Seuss",
   ),
   Motivation(
-    note:
-        "Education is the passport to the future, for tomorrow belongs to those who prepare for it today.",
+    note: LocaleKeys.motivation_list_education_twelve.tr(),
     author: "Malcolm X",
   ),
   Motivation(
-    note: "Learning never exhausts the mind.",
+    note: LocaleKeys.motivation_list_education_thirteen.tr(),
     author: "Leonardo da Vinci",
   ),
   Motivation(
-    note: "The best way to predict the future is to create it",
+    note: LocaleKeys.motivation_list_education_fourteen.tr(),
     author: "Abraham Lincoln",
   ),
   Motivation(
-    note: "Do not wait for the right time, create it.",
+    note: LocaleKeys.motivation_list_education_fifteen.tr(),
     author: "",
   ),
   Motivation(
-    note: "Education is the key to unlock the golden door of freedom.",
+    note: LocaleKeys.motivation_list_education_sixteen.tr(),
     author: "George Washington Carver",
   ),
   Motivation(
-    note:
-        "Success is walking from failure to failure with no loss of enthusiasm.",
+    note: LocaleKeys.motivation_list_education_seventeen.tr(),
     author: "Winston Churchill",
   ),
   Motivation(
-    note: "The more you know, the more you realize how much you don't know.",
+    note: LocaleKeys.motivation_list_education_eighteen.tr(),
     author: "Aristotle",
   ),
   Motivation(
-    note: "Education is not received. It is achieved",
+    note: LocaleKeys.motivation_list_education_nineteen.tr(),
     author: "Albert Einstein",
   ),
   Motivation(
-    note: "An investment in knowledge pays the best interest.",
+    note: LocaleKeys.motivation_list_education_twenty.tr(),
     author: "Benjamin Franklin",
   ),
 ];
