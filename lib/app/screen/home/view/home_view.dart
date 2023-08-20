@@ -13,7 +13,9 @@ class HomeView extends BaseViewProtocol<HomeViewModel> {
       : super(viewModel, key: key);
 
   @override
-  void dispose() {}
+  void dispose() {
+    viewModel.disposeVM();
+  }
 
   @override
   void init() async {
@@ -87,6 +89,21 @@ class HomeView extends BaseViewProtocol<HomeViewModel> {
                                             true
                                         ? Icons.favorite
                                         : Icons.favorite_outline_outlined,
+                                    color: CustomTextColor.getTextColor(
+                                        consumer.backgroundColor),
+                                    size: 25,
+                                  ),
+                                ),
+                              ),
+                              Expanded(
+                                child: InkWell(
+                                  onTap: () => viewModel.speak(
+                                      '${consumer.dataList?[consumer.randomIndex].note}'),
+                                  child: Icon(
+                                    Icons.volume_up_sharp,
+                                    color: CustomTextColor.getTextColor(
+                                        consumer.backgroundColor),
+                                    size: 25,
                                   ),
                                 ),
                               )
@@ -104,25 +121,4 @@ class HomeView extends BaseViewProtocol<HomeViewModel> {
       },
     );
   }
-
-  /**
-   * 
-   * AnimationLimiter(
-            child: ListView.builder(
-              itemCount: _bodyList(context, consumer).length,
-              itemBuilder: (BuildContext context, int index) {
-                return AnimationConfiguration.staggeredList(
-                  position: index,
-                  duration: const Duration(seconds: 1),
-                  child: SlideAnimation(
-                    verticalOffset: 50.0,
-                    child: ScaleAnimation(
-                      child: _bodyList(context, consumer)[index],
-                    ),
-                  ),
-                );
-              },
-            ),
-          ),
-   */
 }

@@ -26,7 +26,7 @@ class MyFavoriteView extends BaseViewProtocol<MyFavoriteViewModel> {
             title: const Text("Favoriler"),
           ),
           body: ListView.builder(
-            itemCount: consumer.myFavoriteList?.length,
+            itemCount: consumer.myFavoriteList?.length ?? 0,
             itemBuilder: (context, index) {
               return Card(
                   color: Colors.lightBlueAccent,

@@ -1,6 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_tts/flutter_tts.dart';
 import 'package:motivation_quotes/app/model/motivation/motivation.dart';
 import 'package:motivation_quotes/core/utilities/cache_manager.dart';
 import 'package:motivation_quotes/src/dictionaries/base_motivition_quotes.dart';
@@ -11,7 +12,7 @@ import '../route/home_router.dart';
 class HomeViewModel extends BaseViewModel<HomeRouter> {
   HomeViewModel(HomeRouter router) : super(router);
   List<IconData> get iconList => [
-        Icons.change_circle_outlined,
+        Icons.person,
         Icons.wb_incandescent_outlined,
         Icons.brush_outlined,
       ];
@@ -26,6 +27,38 @@ class HomeViewModel extends BaseViewModel<HomeRouter> {
   bool isFavorite = false;
   final Random _random = Random();
   int randomIndex = 0;
+  bool get isprogressHandler => _isprogressHandler;
+  bool _isprogressHandler = true;
+
+  FlutterTts? flutterTts;
+
+  Future<void> speak(String text) async {
+    switch (isprogressHandler) {
+      case true:
+        await flutterTts?.setLanguage('en-US'); //tr-Tr
+        await flutterTts?.setPitch(1.0);
+        await flutterTts?.setSpeechRate(0.4);
+        await flutterTts?.speak(text);
+        flutterTts?.setStartHandler(() {
+          print("Çaldı");
+          _isprogressHandler = false;
+          notifty();
+        });
+        flutterTts?.setContinueHandler(() {
+          print("Continiu");
+        });
+        flutterTts?.setProgressHandler((text, start, end, word) {
+          debugPrint("Word $word");
+        });
+        flutterTts?.setCompletionHandler(() {
+          _isprogressHandler = true;
+        });
+        break;
+
+      default:
+        debugPrint("Şuan Çalışıyor");
+    }
+  }
 
   void onPageChanged() {
     randomIndex = _random.nextInt(dataList?.length ?? 1);
@@ -46,6 +79,7 @@ class HomeViewModel extends BaseViewModel<HomeRouter> {
   }
 
   void initVm() async {
+    flutterTts = FlutterTts();
     await CacheManager.instance.getFavorite();
     switch (isSelectedBackgroundImage) {
       case false:
@@ -90,5 +124,11 @@ class HomeViewModel extends BaseViewModel<HomeRouter> {
     }
 
     notifty();
+  }
+
+  void disposeVM() {
+    flutterTts?.stop();
+
+    super.dispose();
   }
 }
