@@ -135,5 +135,16 @@
             "thirteen": "Belirsizliği kucaklayın, sihrin gerçekleştiği yer orasıdır.",
             "fourteen": "Her gün iyi olmayabilir ama her günün içinde iyi bir şey vardır."
         }
+    },
+    "category": {
+        "appbar_title": "Kategori",
+        "title_general": "Genel",
+        "title_favorite": "Favorilerim",
+        "title_education": "Eğitim",
+        "title_positive_think": "Positif Düşünme",
+        "title_love": "Aşk",
+        "title_sport": "Spor",
+        "title_changeAndDevelopment": "Değişim ve Gelişim",
+        "title_passion": "Tutku"
     }
 }

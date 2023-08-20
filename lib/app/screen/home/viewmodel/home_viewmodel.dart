@@ -21,7 +21,6 @@ class HomeViewModel extends BaseViewModel<HomeRouter> {
   Color get backgroundColor => _backgroundColor ?? Colors.transparent;
   Color? _backgroundColor;
   bool? isSelectedBackgroundImage = false;
-
   String? get backgroundImage => _backgroundImage ?? '';
   String? _backgroundImage;
   bool isFavorite = false;
@@ -29,7 +28,6 @@ class HomeViewModel extends BaseViewModel<HomeRouter> {
   int randomIndex = 0;
   bool get isprogressHandler => _isprogressHandler;
   bool _isprogressHandler = true;
-
   FlutterTts? flutterTts;
 
   Future<void> speak(String text) async {
@@ -40,12 +38,12 @@ class HomeViewModel extends BaseViewModel<HomeRouter> {
         await flutterTts?.setSpeechRate(0.4);
         await flutterTts?.speak(text);
         flutterTts?.setStartHandler(() {
-          print("Çaldı");
+          debugPrint("Çaldı");
           _isprogressHandler = false;
           notifty();
         });
         flutterTts?.setContinueHandler(() {
-          print("Continiu");
+          debugPrint("Continiu");
         });
         flutterTts?.setProgressHandler((text, start, end, word) {
           debugPrint("Word $word");
@@ -122,13 +120,11 @@ class HomeViewModel extends BaseViewModel<HomeRouter> {
             Color(int.tryParse('${await CacheManager.instance.getColor()}')!);
         break;
     }
-
     notifty();
   }
 
   void disposeVM() {
     flutterTts?.stop();
-
     super.dispose();
   }
 }

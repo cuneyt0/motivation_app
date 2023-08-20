@@ -1,6 +1,8 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:motivation_quotes/app/screen/home/viewmodel/home_viewmodel.dart';
 import 'package:motivation_quotes/core/utilities/cache_manager.dart';
+import 'package:motivation_quotes/gen/locale_keys.g.dart';
 
 import '../../../../core/base/base_viewmodel.dart';
 import '../route/category_router.dart';
@@ -14,59 +16,70 @@ class CategoryViewModel extends BaseViewModel<CategoryRouter> {
 
   List<Category> get nameList => _name;
   final List<Category> _name = [
-    Category(name: "Genel", color: Colors.purple),
-    Category(name: "Eğitim", color: Colors.green),
-    Category(name: "Positif Düşünme", color: Colors.greenAccent),
-    Category(name: "Aşk", color: Colors.red),
     Category(
-      name: "Spor",
-      color: Colors.blue,
-    ),
+        name: LocaleKeys.category_title_general.tr(), color: Colors.purple),
+    Category(name: LocaleKeys.category_title_favorite.tr(), color: Colors.cyan),
     Category(
-      name: "Değişim ve Gelişim",
-      color: Colors.pinkAccent,
-    ),
+        name: LocaleKeys.category_title_education.tr(), color: Colors.green),
     Category(
-      name: "Tutku",
-      color: Colors.pink,
-    ),
+        name: LocaleKeys.category_title_positive_think.tr(),
+        color: Colors.greenAccent),
+    Category(name: LocaleKeys.category_title_love.tr(), color: Colors.red),
+    Category(name: LocaleKeys.category_title_sport.tr(), color: Colors.blue),
+    Category(
+        name: LocaleKeys.category_title_changeAndDevelopment.tr(),
+        color: Colors.pinkAccent),
+    Category(name: LocaleKeys.category_title_passion.tr(), color: Colors.pink),
   ];
 
-  onTap(int index) async {
+  void onTap(int index) async {
     switch (index) {
       case 0:
         await CacheManager.instance.saveType(ListType.general);
         homeViewModel?.changedState();
+        notifty();
+        router.close();
         break;
       case 1:
-        await CacheManager.instance.saveType(ListType.education);
-        homeViewModel?.changedState();
+        router.showMyFavorite();
         break;
       case 2:
-        await CacheManager.instance.saveType(ListType.possitive);
+        await CacheManager.instance.saveType(ListType.education);
         homeViewModel?.changedState();
+        notifty();
+        router.close();
         break;
       case 3:
-        await CacheManager.instance.saveType(ListType.love);
+        await CacheManager.instance.saveType(ListType.possitive);
         homeViewModel?.changedState();
+        notifty();
+        router.close();
         break;
       case 4:
-        await CacheManager.instance.saveType(ListType.sport);
+        await CacheManager.instance.saveType(ListType.love);
         homeViewModel?.changedState();
+        notifty();
+        router.close();
         break;
       case 5:
-        await CacheManager.instance.saveType(ListType.changeAndDevelopment);
+        await CacheManager.instance.saveType(ListType.sport);
         homeViewModel?.changedState();
+        notifty();
+        router.close();
         break;
       case 6:
+        await CacheManager.instance.saveType(ListType.changeAndDevelopment);
+        homeViewModel?.changedState();
+        notifty();
+        router.close();
+        break;
+      default:
         await CacheManager.instance.saveType(ListType.passion);
         homeViewModel?.changedState();
+        notifty();
+        router.close();
         break;
-
-      default:
     }
-    notifty();
-    router.close();
   }
 }
 

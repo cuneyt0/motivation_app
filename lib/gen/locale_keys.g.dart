@@ -130,5 +130,15 @@ abstract class  LocaleKeys {
   static const motivation_list_general_fourteen = 'motivation_list.general.fourteen';
   static const motivation_list_general = 'motivation_list.general';
   static const motivation_list = 'motivation_list';
+  static const category_appbar_title = 'category.appbar_title';
+  static const category_title_general = 'category.title_general';
+  static const category_title_favorite = 'category.title_favorite';
+  static const category_title_education = 'category.title_education';
+  static const category_title_positive_think = 'category.title_positive_think';
+  static const category_title_love = 'category.title_love';
+  static const category_title_sport = 'category.title_sport';
+  static const category_title_changeAndDevelopment = 'category.title_changeAndDevelopment';
+  static const category_title_passion = 'category.title_passion';
+  static const category = 'category';
 
 }

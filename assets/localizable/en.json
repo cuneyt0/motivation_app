@@ -135,5 +135,16 @@
             "thirteen": "Embrace the uncertainty, it's where the magic happens.",
             "fourteen": "Every day may not be good, but there's something good in every day."
         }
+    },
+    "category": {
+        "appbar_title": "Category",
+        "title_general": "General",
+        "title_favorite": "My Favorite",
+        "title_education": "Education",
+        "title_positive_think": "Positive Think",
+        "title_love": "Love",
+        "title_sport": "Sport",
+        "title_changeAndDevelopment": "Change And Development",
+        "title_passion": "Passion"
     }
 }
