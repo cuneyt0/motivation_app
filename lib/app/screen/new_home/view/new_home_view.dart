@@ -1,4 +1,4 @@
-import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:motivation_quotes/core/extension/color_extension.dart';
@@ -6,34 +6,25 @@ import 'package:provider/provider.dart';
 
 import '../../../../core/base/base_view.dart';
 import '../../../../core/theme/core/theme_manager.dart';
-import '../viewmodel/home_viewmodel.dart';
+import '../viewmodel/new_home_viewmodel.dart';
 
-class HomeView extends BaseViewProtocol<HomeViewModel> {
-  const HomeView({Key? key, required HomeViewModel viewModel})
+class NewHomeView extends BaseViewProtocol<NewHomeViewModel> {
+  const NewHomeView({Key? key, required NewHomeViewModel viewModel})
       : super(viewModel, key: key);
 
   @override
-  void dispose() {
-    viewModel.disposeVM();
-  }
+  void dispose() {}
 
   @override
-  void init() async {
-    viewModel.initVm();
+  void init() {
+    viewModel.initVM();
   }
 
   @override
   Widget startView(BuildContext context, ThemeManager theme) {
-    return Consumer<HomeViewModel>(
+    return Consumer<NewHomeViewModel>(
       builder: (_, consumer, widget) {
         return Scaffold(
-          bottomNavigationBar: AnimatedBottomNavigationBar(
-              icons: consumer.iconList,
-              activeColor: Colors.blue,
-              activeIndex: consumer.bottomNavIndex,
-              gapLocation: GapLocation.none,
-              notchSmoothness: NotchSmoothness.verySmoothEdge,
-              onTap: (index) => consumer.onTap(index)),
           body: LayoutBuilder(builder: (context, constraints) {
             return Container(
               decoration: BoxDecoration(
@@ -48,11 +39,7 @@ class HomeView extends BaseViewProtocol<HomeViewModel> {
               child: PageView.builder(
                 itemCount: consumer.dataList?.length,
                 scrollDirection: Axis.vertical,
-                onPageChanged: (value) {
-                  consumer.onPageChanged();
-                  print(
-                      ' consumer.dataList?[consumer.randomIndex].favorite ${consumer.dataList?[consumer.randomIndex].favorite}');
-                },
+                onPageChanged: (value) => consumer.onPageChanged(),
                 itemBuilder: (context, index) {
                   return Stack(
                     children: [
@@ -63,7 +50,9 @@ class HomeView extends BaseViewProtocol<HomeViewModel> {
                             padding:
                                 const EdgeInsets.only(left: 20.0, right: 20),
                             child: Text(
-                              '${consumer.dataList?[consumer.randomIndex].note}',
+                              consumer.dataList?[consumer.randomIndex]
+                                      .getTranslatedNote(context) ??
+                                  '-',
                               textAlign: TextAlign.center,
                               style: GoogleFonts.anekOdia(
                                   color: CustomTextColor.getTextColor(
@@ -98,7 +87,8 @@ class HomeView extends BaseViewProtocol<HomeViewModel> {
                               Expanded(
                                 child: InkWell(
                                   onTap: () => viewModel.speak(
-                                      '${consumer.dataList?[consumer.randomIndex].note}'),
+                                      '${consumer.dataList?[consumer.randomIndex].note}'
+                                          .tr()),
                                   child: Icon(
                                     Icons.volume_up_sharp,
                                     color: CustomTextColor.getTextColor(

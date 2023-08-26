@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+
 import '../theme/core/theme_manager.dart';
 import '../theme/mixins/theme_mixin.dart';
 import 'base_viewmodel.dart';

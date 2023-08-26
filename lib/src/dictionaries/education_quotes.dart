@@ -4,83 +4,83 @@ import 'package:motivation_quotes/gen/locale_keys.g.dart';
 
 final List<Motivation> quotesEducation = [
   Motivation(
-    note: LocaleKeys.motivation_list_education_first.tr(),
+    note: LocaleKeys.motivation_list_education_first,
     author: "Nelson Mandela",
   ),
   Motivation(
-    note: LocaleKeys.motivation_list_education_second.tr(),
+    note: LocaleKeys.motivation_list_education_second,
     author: "B.B. King",
   ),
   Motivation(
-    note: LocaleKeys.motivation_list_education_three.tr(),
+    note: LocaleKeys.motivation_list_education_three,
     author: "Helen Hayes",
   ),
   Motivation(
-    note: LocaleKeys.motivation_list_education_four.tr(),
+    note: LocaleKeys.motivation_list_education_four,
     author: "Paul Halmos",
   ),
   Motivation(
-    note: LocaleKeys.motivation_list_education_five.tr(),
+    note: LocaleKeys.motivation_list_education_five,
     author: "Chinese Proverb",
   ),
   Motivation(
-    note: LocaleKeys.motivation_list_education_six.tr(),
+    note: LocaleKeys.motivation_list_education_six,
     author: "W.B. Yeats",
   ),
   Motivation(
-    note: LocaleKeys.motivation_list_education_seven.tr(),
+    note: LocaleKeys.motivation_list_education_seven,
     author: "Robert Collier",
   ),
   Motivation(
-    note: LocaleKeys.motivation_list_education_eight.tr(),
+    note: LocaleKeys.motivation_list_education_eight,
     author: "Aristotle",
   ),
   Motivation(
-    note: LocaleKeys.motivation_list_education_nine.tr(),
+    note: LocaleKeys.motivation_list_education_nine,
     author: "",
   ),
   Motivation(
-    note: LocaleKeys.motivation_list_education_ten.tr(),
+    note: LocaleKeys.motivation_list_education_ten,
     author: "John Dewey",
   ),
   Motivation(
-    note: LocaleKeys.motivation_list_education_eleven.tr(),
+    note: LocaleKeys.motivation_list_education_eleven,
     author: "Dr. Seuss",
   ),
   Motivation(
-    note: LocaleKeys.motivation_list_education_twelve.tr(),
+    note: LocaleKeys.motivation_list_education_twelve,
     author: "Malcolm X",
   ),
   Motivation(
-    note: LocaleKeys.motivation_list_education_thirteen.tr(),
+    note: LocaleKeys.motivation_list_education_thirteen,
     author: "Leonardo da Vinci",
   ),
   Motivation(
-    note: LocaleKeys.motivation_list_education_fourteen.tr(),
+    note: LocaleKeys.motivation_list_education_fourteen,
     author: "Abraham Lincoln",
   ),
   Motivation(
-    note: LocaleKeys.motivation_list_education_fifteen.tr(),
+    note: LocaleKeys.motivation_list_education_fifteen,
     author: "",
   ),
   Motivation(
-    note: LocaleKeys.motivation_list_education_sixteen.tr(),
+    note: LocaleKeys.motivation_list_education_sixteen,
     author: "George Washington Carver",
   ),
   Motivation(
-    note: LocaleKeys.motivation_list_education_seventeen.tr(),
+    note: LocaleKeys.motivation_list_education_seventeen,
     author: "Winston Churchill",
   ),
   Motivation(
-    note: LocaleKeys.motivation_list_education_eighteen.tr(),
+    note: LocaleKeys.motivation_list_education_eighteen,
     author: "Aristotle",
   ),
   Motivation(
-    note: LocaleKeys.motivation_list_education_nineteen.tr(),
+    note: LocaleKeys.motivation_list_education_nineteen,
     author: "Albert Einstein",
   ),
   Motivation(
-    note: LocaleKeys.motivation_list_education_twenty.tr(),
+    note: LocaleKeys.motivation_list_education_twenty,
     author: "Benjamin Franklin",
   ),
 ];

@@ -1,37 +1,35 @@
-import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../../../../core/base/base_view.dart';
 import '../../../../core/theme/core/theme_manager.dart';
-import '../viewmodel/my_favorite_viewmodel.dart';
+import '../viewmodel/language_viewmodel.dart';
 
-class MyFavoriteView extends BaseViewProtocol<MyFavoriteViewModel> {
-  const MyFavoriteView({Key? key, required MyFavoriteViewModel viewModel})
+class LanguageView extends BaseViewProtocol<LanguageViewModel> {
+  const LanguageView({Key? key, required LanguageViewModel viewModel})
       : super(viewModel, key: key);
 
   @override
   void dispose() {}
 
   @override
-  void init() {
-    viewModel.initVm();
-  }
+  void init() {}
 
   @override
   Widget startView(BuildContext context, ThemeManager theme) {
-    return Consumer<MyFavoriteViewModel>(
+    return Consumer<LanguageViewModel>(
       builder: (_, consumer, widget) {
         return Scaffold(
           appBar: AppBar(
-            title: const Text("Favoriler"),
+            title: const Text("LanguagePage"),
           ),
           body: ListView.builder(
-            itemCount: consumer.myFavoriteList?.length ?? 0,
+            itemCount: consumer.languages.length ?? 0,
             itemBuilder: (context, index) {
               return Card(
                 child: ListTile(
-                  title: Text("${consumer.myFavoriteList?[index]}".tr()),
+                  onTap: () => consumer.seletedLanguage(index),
+                  title: Text(consumer.languages[index]),
                 ),
               );
             },

@@ -99,29 +99,30 @@ class CustomColorView extends BaseViewProtocol<CustomColorViewModel> {
               ),
             ),
             SizedBox(
-                height: MediaQuery.of(context).size.height *
-                    (MediaQuery.of(context).size.height < 800 ? 0.18 : 0.23),
-                child: GridView.builder(
-                  scrollDirection: Axis.horizontal,
-                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisCount: 1,
-                      childAspectRatio: 1,
-                      mainAxisSpacing: 20),
-                  itemBuilder: (context, index) {
-                    return InkWell(
-                      onTap: () => consumer.selectImage(consumer.images[index]),
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(5), // Image border
-                        child: SizedBox.fromSize(
-                            child: Image.asset(
-                          consumer.images[index],
-                          fit: BoxFit.cover,
-                        )),
-                      ),
-                    );
-                  },
-                  itemCount: consumer.images.length,
-                )),
+              height: MediaQuery.of(context).size.height *
+                  (MediaQuery.of(context).size.height < 800 ? 0.18 : 0.23),
+              child: GridView.builder(
+                scrollDirection: Axis.horizontal,
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 1,
+                    childAspectRatio: 1,
+                    mainAxisSpacing: 20),
+                itemBuilder: (context, index) {
+                  return InkWell(
+                    onTap: () => consumer.selectImage(consumer.images[index]),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(5),
+                      child: SizedBox.fromSize(
+                          child: Image.asset(
+                        consumer.images[index],
+                        fit: BoxFit.cover,
+                      )),
+                    ),
+                  );
+                },
+                itemCount: consumer.images.length,
+              ),
+            ),
           ],
         ),
       ];

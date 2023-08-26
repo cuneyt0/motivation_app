@@ -13,4 +13,12 @@ mixin SplashRoute on AppRouter {
     final view = SplashView(viewModel: viewModel);
     return push(view);
   }
+
+  Future<dynamic> showSplashPushAndRemoveAll() async {
+    var viewModel = Provider.of<SplashViewModel>(
+        Navigation.navigatorKey.currentContext!,
+        listen: false);
+    final view = SplashView(viewModel: viewModel);
+    return pushAndRemoveAll(view);
+  }
 }

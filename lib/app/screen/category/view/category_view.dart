@@ -38,10 +38,12 @@ class CategoryView extends BaseViewProtocol<CategoryViewModel> {
                   consumer.onTap(index);
                 },
                 child: Card(
-                    color: consumer.nameList[index].color,
-                    child: Center(
-                      child: AutoSizeText('${consumer.nameList[index].name}'),
-                    )),
+                  color: consumer.nameList[index].color,
+                  child: Center(
+                    child:
+                        AutoSizeText('${consumer.nameList[index].name}'.tr()),
+                  ),
+                ),
               );
             },
           ),

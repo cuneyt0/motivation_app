@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:motivation_quotes/app/screen/home/viewmodel/home_viewmodel.dart';
 import 'package:motivation_quotes/core/utilities/cache_manager.dart';
 import 'package:motivation_quotes/gen/assets.gen.dart';
 
@@ -7,9 +6,10 @@ import '../../../../core/base/base_viewmodel.dart';
 import '../route/custom_color_router.dart';
 
 class CustomColorViewModel extends BaseViewModel<CustomColorRouter> {
-  CustomColorViewModel(CustomColorRouter router, {this.homeViewModel})
-      : super(router);
-  HomeViewModel? homeViewModel;
+  CustomColorViewModel(
+    CustomColorRouter router,
+  ) : super(router);
+
   List<Color> get allColors => [...Colors.primaries, ...Colors.accents];
 
   List<String> get images => [
@@ -27,8 +27,8 @@ class CustomColorViewModel extends BaseViewModel<CustomColorRouter> {
     final value = _getValueFromExpression(color.toString());
     await CacheManager.instance.saveColor(value);
     await CacheManager.instance.saveOption(false);
-    homeViewModel?.changedState();
-    router.close();
+
+    router.showSplash();
 
     notifty();
   }
@@ -41,8 +41,8 @@ class CustomColorViewModel extends BaseViewModel<CustomColorRouter> {
   void selectImage(String? image) async {
     await CacheManager.instance.saveImage(image);
     await CacheManager.instance.saveOption(true);
-    await homeViewModel?.changedState();
-    router.close();
+
+    router.showSplash();
     notifty();
   }
 }

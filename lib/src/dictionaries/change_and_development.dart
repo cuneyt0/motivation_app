@@ -4,79 +4,79 @@ import 'package:motivation_quotes/gen/locale_keys.g.dart';
 
 final List<Motivation> quotesChangeAndDevelopment = [
   Motivation(
-    note: LocaleKeys.motivation_list_changeAndDevelopment_first.tr(),
+    note: LocaleKeys.motivation_list_changeAndDevelopment_first,
     author: "Alan Watts",
   ),
   Motivation(
-    note: LocaleKeys.motivation_list_changeAndDevelopment_second.tr(),
+    note: LocaleKeys.motivation_list_changeAndDevelopment_second,
     author: "Reinhold Niebuhr",
   ),
   Motivation(
-    note: LocaleKeys.motivation_list_changeAndDevelopment_three.tr(),
+    note: LocaleKeys.motivation_list_changeAndDevelopment_three,
     author: "",
   ),
   Motivation(
-    note: LocaleKeys.motivation_list_changeAndDevelopment_four.tr(),
+    note: LocaleKeys.motivation_list_changeAndDevelopment_four,
     author: "Socrates",
   ),
   Motivation(
-    note: LocaleKeys.motivation_list_changeAndDevelopment_five.tr(),
+    note: LocaleKeys.motivation_list_changeAndDevelopment_five,
     author: "George Bernard Shaw",
   ),
   Motivation(
-    note: LocaleKeys.motivation_list_changeAndDevelopment_six.tr(),
+    note: LocaleKeys.motivation_list_changeAndDevelopment_six,
     author: "",
   ),
   Motivation(
-    note: LocaleKeys.motivation_list_changeAndDevelopment_seven.tr(),
+    note: LocaleKeys.motivation_list_changeAndDevelopment_seven,
     author: "Norman Vincent Peale",
   ),
   Motivation(
-    note: LocaleKeys.motivation_list_changeAndDevelopment_eight.tr(),
+    note: LocaleKeys.motivation_list_changeAndDevelopment_eight,
     author: "Lao Tzu",
   ),
   Motivation(
-    note: LocaleKeys.motivation_list_changeAndDevelopment_nine.tr(),
+    note: LocaleKeys.motivation_list_changeAndDevelopment_nine,
     author: "",
   ),
   Motivation(
-    note: LocaleKeys.motivation_list_changeAndDevelopment_ten.tr(),
+    note: LocaleKeys.motivation_list_changeAndDevelopment_ten,
     author: "",
   ),
   Motivation(
-    note: LocaleKeys.motivation_list_changeAndDevelopment_eleven.tr(),
+    note: LocaleKeys.motivation_list_changeAndDevelopment_eleven,
     author: "",
   ),
   Motivation(
-    note: LocaleKeys.motivation_list_changeAndDevelopment_twelve.tr(),
+    note: LocaleKeys.motivation_list_changeAndDevelopment_twelve,
     author: "",
   ),
   Motivation(
-    note: LocaleKeys.motivation_list_changeAndDevelopment_thirteen.tr(),
+    note: LocaleKeys.motivation_list_changeAndDevelopment_thirteen,
     author: "",
   ),
   Motivation(
-    note: LocaleKeys.motivation_list_changeAndDevelopment_fourteen.tr(),
+    note: LocaleKeys.motivation_list_changeAndDevelopment_fourteen,
     author: "Ralph Waldo Emerson",
   ),
   Motivation(
-    note: LocaleKeys.motivation_list_changeAndDevelopment_fifteen.tr(),
+    note: LocaleKeys.motivation_list_changeAndDevelopment_fifteen,
     author: "",
   ),
   Motivation(
-    note: LocaleKeys.motivation_list_changeAndDevelopment_sixteen.tr(),
+    note: LocaleKeys.motivation_list_changeAndDevelopment_sixteen,
     author: "John D. Rockefeller",
   ),
   Motivation(
-    note: LocaleKeys.motivation_list_changeAndDevelopment_seventeen.tr(),
+    note: LocaleKeys.motivation_list_changeAndDevelopment_seventeen,
     author: "",
   ),
   Motivation(
-    note: LocaleKeys.motivation_list_changeAndDevelopment_eighteen.tr(),
+    note: LocaleKeys.motivation_list_changeAndDevelopment_eighteen,
     author: "Winston Churchill",
   ),
   Motivation(
-    note: LocaleKeys.motivation_list_changeAndDevelopment_nineteen.tr(),
+    note: LocaleKeys.motivation_list_changeAndDevelopment_nineteen,
     author: "",
   ),
 ];

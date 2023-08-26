@@ -1,4 +1,5 @@
 import 'package:easy_localization/easy_localization.dart';
+import 'package:flutter/material.dart';
 import 'package:motivation_quotes/core/utilities/cache_manager.dart';
 
 class Motivation {
@@ -16,5 +17,8 @@ class Motivation {
         }
       });
     });
+  }
+  String getTranslatedNote(BuildContext context) {
+    return note?.tr() ?? '';
   }
 }
