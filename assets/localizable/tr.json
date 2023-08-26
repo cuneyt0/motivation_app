@@ -146,5 +146,22 @@
         "title_sport": "Spor",
         "title_changeAndDevelopment": "Değişim ve Gelişim",
         "title_passion": "Tutku"
+    },
+    "language": {
+        "title": "Diller",
+        "english": "İngilizce",
+        "turkish": "Türkçe"
+    },
+    "custom_color": {
+        "title": "Arkaplan Seç",
+        "images": "Resimler",
+        "colors": "Renkler"
+    },
+    "my_favorite": {
+        "appbar_title": "Favoriler"
+    },
+    "my_profile": {
+        "appbar_title": "Profil",
+        "about_information": "Uygulama Hakkında"
     }
 }

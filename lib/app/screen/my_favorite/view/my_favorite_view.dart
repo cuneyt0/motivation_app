@@ -1,5 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:motivation_quotes/gen/locale_keys.g.dart';
 import 'package:provider/provider.dart';
 
 import '../../../../core/base/base_view.dart';
@@ -24,7 +25,7 @@ class MyFavoriteView extends BaseViewProtocol<MyFavoriteViewModel> {
       builder: (_, consumer, widget) {
         return Scaffold(
           appBar: AppBar(
-            title: const Text("Favoriler"),
+            title: Text(LocaleKeys.my_favorite_appbar_title.tr()),
           ),
           body: ListView.builder(
             itemCount: consumer.myFavoriteList?.length ?? 0,

@@ -1,6 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:motivation_quotes/core/navigation/navigation.dart';
+import 'package:motivation_quotes/gen/locale_keys.g.dart';
 
 import '../../../../core/base/base_viewmodel.dart';
 import '../route/language_router.dart';
@@ -8,7 +9,10 @@ import '../route/language_router.dart';
 class LanguageViewModel extends BaseViewModel<LanguageRouter> {
   LanguageViewModel(LanguageRouter router) : super(router);
 
-  List<String> languages = ["Türkçe", "İnglizce"];
+  List<String> languages = [
+    LocaleKeys.language_turkish,
+    LocaleKeys.language_english
+  ];
 
   void seletedLanguage(int? index) async {
     switch (index) {
@@ -22,10 +26,9 @@ class LanguageViewModel extends BaseViewModel<LanguageRouter> {
                   .setLocale(const Locale('tr', ''));
 
               notifty();
-              //   final result = await Restart.restartApp();
+
               router.showSplashPushAndRemoveAll();
             }, no: () {
-              print("asdfsdf");
               router.close();
 
               notifty();
@@ -43,9 +46,7 @@ class LanguageViewModel extends BaseViewModel<LanguageRouter> {
 
               notifty();
               router.showSplashPushAndRemoveAll();
-              //  final result = await Restart.restartApp();
             }, no: () {
-              print("asdfsdf");
               router.close();
               notifty();
             });

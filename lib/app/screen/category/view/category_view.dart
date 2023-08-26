@@ -34,9 +34,7 @@ class CategoryView extends BaseViewProtocol<CategoryViewModel> {
             ),
             itemBuilder: (context, index) {
               return InkWell(
-                onTap: () {
-                  consumer.onTap(index);
-                },
+                onTap: () => consumer.onTap(index),
                 child: Card(
                   color: consumer.nameList[index].color,
                   child: Center(

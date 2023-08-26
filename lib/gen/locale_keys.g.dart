@@ -140,5 +140,18 @@ abstract class  LocaleKeys {
   static const category_title_changeAndDevelopment = 'category.title_changeAndDevelopment';
   static const category_title_passion = 'category.title_passion';
   static const category = 'category';
+  static const language_title = 'language.title';
+  static const language_english = 'language.english';
+  static const language_turkish = 'language.turkish';
+  static const language = 'language';
+  static const custom_color_title = 'custom_color.title';
+  static const custom_color_images = 'custom_color.images';
+  static const custom_color_colors = 'custom_color.colors';
+  static const custom_color = 'custom_color';
+  static const my_favorite_appbar_title = 'my_favorite.appbar_title';
+  static const my_favorite = 'my_favorite';
+  static const my_profile_appbar_title = 'my_profile.appbar_title';
+  static const my_profile_about_information = 'my_profile.about_information';
+  static const my_profile = 'my_profile';
 
 }

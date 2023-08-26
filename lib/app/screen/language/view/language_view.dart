@@ -1,4 +1,6 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:motivation_quotes/gen/locale_keys.g.dart';
 import 'package:provider/provider.dart';
 
 import '../../../../core/base/base_view.dart';
@@ -21,7 +23,7 @@ class LanguageView extends BaseViewProtocol<LanguageViewModel> {
       builder: (_, consumer, widget) {
         return Scaffold(
           appBar: AppBar(
-            title: const Text("LanguagePage"),
+            title: Text(LocaleKeys.language_title.tr()),
           ),
           body: ListView.builder(
             itemCount: consumer.languages.length ?? 0,
@@ -29,7 +31,7 @@ class LanguageView extends BaseViewProtocol<LanguageViewModel> {
               return Card(
                 child: ListTile(
                   onTap: () => consumer.seletedLanguage(index),
-                  title: Text(consumer.languages[index]),
+                  title: Text(consumer.languages[index].tr()),
                 ),
               );
             },

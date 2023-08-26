@@ -1,6 +1,8 @@
 import 'package:auto_size_text/auto_size_text.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:motivation_quotes/core/extension/color_extension.dart';
+import 'package:motivation_quotes/gen/locale_keys.g.dart';
 import 'package:provider/provider.dart';
 
 import '../../../../core/base/base_view.dart';
@@ -23,7 +25,7 @@ class CustomColorView extends BaseViewProtocol<CustomColorViewModel> {
       builder: (_, consumer, widget) {
         return Scaffold(
           appBar: AppBar(
-            title: const Text("Arka plan Seç"),
+            title: Text(LocaleKeys.custom_color_title.tr()),
           ),
           body: ListView.separated(
             shrinkWrap: true,
@@ -45,11 +47,11 @@ class CustomColorView extends BaseViewProtocol<CustomColorViewModel> {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Padding(
-              padding: EdgeInsets.only(top: 10.0, bottom: 10, left: 5),
+            Padding(
+              padding: const EdgeInsets.only(top: 10.0, bottom: 10, left: 5),
               child: AutoSizeText(
-                "Renkler",
-                style: TextStyle(fontSize: 18, color: Colors.black),
+                LocaleKeys.custom_color_colors.tr(),
+                style: const TextStyle(fontSize: 18, color: Colors.black),
                 maxLines: 2,
               ),
             ),
@@ -90,11 +92,11 @@ class CustomColorView extends BaseViewProtocol<CustomColorViewModel> {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Padding(
-              padding: EdgeInsets.only(top: 10.0, bottom: 10, left: 5),
+            Padding(
+              padding: const EdgeInsets.only(top: 10.0, bottom: 10, left: 5),
               child: AutoSizeText(
-                "Resimler",
-                style: TextStyle(fontSize: 18, color: Colors.black),
+                LocaleKeys.custom_color_images.tr(),
+                style: const TextStyle(fontSize: 18, color: Colors.black),
                 maxLines: 2,
               ),
             ),

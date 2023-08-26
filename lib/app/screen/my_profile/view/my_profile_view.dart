@@ -24,7 +24,7 @@ class MyProfileView extends BaseViewProtocol<MyProfileViewModel> {
       builder: (_, consumer, widget) {
         return Scaffold(
           appBar: AppBar(
-            title: Text(LocaleKeys.category_appbar_title.tr()),
+            title: Text(LocaleKeys.my_favorite_appbar_title.tr()),
           ),
           body: ListView.separated(
             separatorBuilder: (context, index) => const SizedBox(height: 20),
@@ -41,17 +41,17 @@ class MyProfileView extends BaseViewProtocol<MyProfileViewModel> {
   List<Widget> _bodyList(BuildContext context, MyProfileViewModel consumer) => [
         InkWell(
           onTap: () => consumer.router.showLanguage(),
-          child: const Card(
+          child: Card(
             child: ListTile(
-              title: AutoSizeText("Language"),
-              trailing: Icon(Icons.language_rounded),
+              title: AutoSizeText(LocaleKeys.language_title.tr()),
+              trailing: const Icon(Icons.language_rounded),
             ),
           ),
         ),
-        const Card(
+        Card(
           child: ListTile(
-            title: AutoSizeText("About Application"),
-            trailing: Icon(Icons.info),
+            title: AutoSizeText(LocaleKeys.my_profile_about_information.tr()),
+            trailing: const Icon(Icons.info),
           ),
         )
       ];

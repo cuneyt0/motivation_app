@@ -146,5 +146,22 @@
         "title_sport": "Sport",
         "title_changeAndDevelopment": "Change And Development",
         "title_passion": "Passion"
+    },
+    "language": {
+        "title": "Languages",
+        "english": "English",
+        "turkish": "Turkish"
+    },
+    "custom_color": {
+        "title": "Select Background",
+        "images": "Images",
+        "colors": "Colors"
+    },
+    "my_favorite": {
+        "appbar_title": "My Favorite"
+    },
+    "my_profile": {
+        "appbar_title": "Profile",
+        "about_information": "About The Application"
     }
 }
