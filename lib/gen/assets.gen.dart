@@ -12,6 +12,9 @@ import 'package:flutter/widgets.dart';
 class $AssetsImagesGen {
   const $AssetsImagesGen();
 
+  /// File path: assets/images/brian.jpg
+  AssetGenImage get brian => const AssetGenImage('assets/images/brian.jpg');
+
   /// File path: assets/images/dock.jpg
   AssetGenImage get dock => const AssetGenImage('assets/images/dock.jpg');
 
@@ -38,7 +41,7 @@ class $AssetsImagesGen {
 
   /// List of all assets
   List<AssetGenImage> get values =>
-      [dock, manish, omid, raamin, sanket, sasha, sitrika, vlad];
+      [brian, dock, manish, omid, raamin, sanket, sasha, sitrika, vlad];
 }
 
 class $AssetsLocalizableGen {

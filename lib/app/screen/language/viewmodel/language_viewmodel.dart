@@ -17,7 +17,6 @@ class LanguageViewModel extends BaseViewModel<LanguageRouter> {
   void seletedLanguage(int? index) async {
     switch (index) {
       case 0:
-        print("Türkçe");
         showDialog(
           context: Navigation.navigatorKey.currentState!.context,
           builder: (context) {
@@ -52,26 +51,24 @@ class LanguageViewModel extends BaseViewModel<LanguageRouter> {
             });
           },
         );
-        print("İnglizce");
     }
   }
 
   AlertDialog _dialog(
       {required void Function()? yes, required void Function()? no}) {
     return AlertDialog(
-      title: const Text("Uyarı"),
-      content: const Text(
-        "Uygulama dilini değiştirmek istediğinize emin misiniz?",
-        textAlign: TextAlign.center,
+      // title: const Text("Uyarı"),
+      content: Text(
+        LocaleKeys.language_alert_message.tr(),
+        textAlign: TextAlign.justify,
       ),
       actions: [
-        TextButton(onPressed: no, child: const Text("Hayır")),
-        TextButton(onPressed: yes, child: const Text("Evet"))
+        TextButton(
+            onPressed: no, child: Text(LocaleKeys.language_reject_button.tr())),
+        TextButton(
+            onPressed: yes,
+            child: Text(LocaleKeys.language_approve_button.tr()))
       ],
     );
   }
 }
-// List<Locale> languages = [const Locale('tr', '')];
-
-/**  ElevatedButton(onPressed: () {}, child: const Text("Evet")),
-                ElevatedButton(onPressed: () {}, child: const Text("Hayır")) */

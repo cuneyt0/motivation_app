@@ -54,7 +54,7 @@ class NewHomeView extends BaseViewProtocol<NewHomeViewModel> {
                                       .getTranslatedNote(context) ??
                                   '-',
                               textAlign: TextAlign.center,
-                              style: GoogleFonts.anekOdia(
+                              style: GoogleFonts.albertSans(
                                   color: CustomTextColor.getTextColor(
                                       consumer.backgroundColor),
                                   fontSize: 25,

@@ -19,17 +19,22 @@ class CustomColorViewModel extends BaseViewModel<CustomColorRouter> {
         Assets.images.sanket.path,
         Assets.images.sasha.path,
         Assets.images.raamin.path,
-        Assets.images.manish.path,
+        Assets.images.brian.path,
         Assets.images.vlad.path,
       ];
 
   Future<void> ontap(Color color) async {
-    final value = _getValueFromExpression(color.toString());
-    await CacheManager.instance.saveColor(value);
+    _changedColor(color);
     await CacheManager.instance.saveOption(false);
 
     router.showSplash();
 
+    notifty();
+  }
+
+  void _changedColor(Color color) async {
+    final value = _getValueFromExpression(color.toString());
+    await CacheManager.instance.saveColor(value);
     notifty();
   }
 
@@ -38,7 +43,14 @@ class CustomColorViewModel extends BaseViewModel<CustomColorRouter> {
     return match?.group(1);
   }
 
-  void selectImage(String? image) async {
+  void selectImage(String? image, int index) async {
+    print("İndex $index");
+
+    if (index == 2 || index == 6) {
+      _changedColor(const Color(0xffcddc39));
+    } else {
+      _changedColor(const Color(0xff673ab7));
+    }
     await CacheManager.instance.saveImage(image);
     await CacheManager.instance.saveOption(true);
 

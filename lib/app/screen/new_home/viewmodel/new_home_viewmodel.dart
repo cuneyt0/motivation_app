@@ -15,7 +15,7 @@ class NewHomeViewModel extends BaseViewModel<NewHomeRouter> {
   NewHomeViewModel(NewHomeRouter router) : super(router);
   List<Motivation>? get dataList => _dataList;
   List<Motivation>? _dataList;
-  Color get backgroundColor => _backgroundColor ?? Colors.transparent;
+  Color get backgroundColor => _backgroundColor ?? Colors.black;
   Color? _backgroundColor;
 
   bool? isSelectedBackgroundImage = true;
@@ -28,6 +28,7 @@ class NewHomeViewModel extends BaseViewModel<NewHomeRouter> {
   FlutterTts? flutterTts;
 
   void initVM() async {
+    print("INIT");
     //await CacheManager.instance.removeAllData();
     final type = await CacheManager.instance.getType();
     BaseMotivationQuotes.getInstance().setListType(type);
@@ -36,13 +37,13 @@ class NewHomeViewModel extends BaseViewModel<NewHomeRouter> {
     flutterTts = FlutterTts();
     await CacheManager.instance.getFavorite();
     switch (isSelectedBackgroundImage) {
-      case false:
-        _backgroundColor =
-            Color(int.tryParse('${await CacheManager.instance.getColor()}')!);
+      case true:
+        _backgroundImage = await CacheManager.instance.getImage();
         break;
       default:
-        _backgroundImage = await CacheManager.instance.getImage();
     }
+    _backgroundColor =
+        Color(int.tryParse('${await CacheManager.instance.getColor()}')!);
 
     notifty();
   }

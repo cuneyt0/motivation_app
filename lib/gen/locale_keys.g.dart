@@ -143,6 +143,9 @@ abstract class  LocaleKeys {
   static const language_title = 'language.title';
   static const language_english = 'language.english';
   static const language_turkish = 'language.turkish';
+  static const language_alert_message = 'language.alert_message';
+  static const language_approve_button = 'language.approve_button';
+  static const language_reject_button = 'language.reject_button';
   static const language = 'language';
   static const custom_color_title = 'custom_color.title';
   static const custom_color_images = 'custom_color.images';

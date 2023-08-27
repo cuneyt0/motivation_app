@@ -150,7 +150,10 @@
     "language": {
         "title": "Languages",
         "english": "English",
-        "turkish": "Turkish"
+        "turkish": "Turkish",
+        "alert_message": "Are you sure you want to change the application language?",
+        "approve_button": "Yes",
+        "reject_button": "No"
     },
     "custom_color": {
         "title": "Select Background",

@@ -150,7 +150,10 @@
     "language": {
         "title": "Diller",
         "english": "İngilizce",
-        "turkish": "Türkçe"
+        "turkish": "Türkçe",
+        "alert_message": "Uygulama dilini değiştirmek istediğinize emin misiniz?",
+        "approve_button": "Evet",
+        "reject_button": "Hayır"
     },
     "custom_color": {
         "title": "Arkaplan Seç",

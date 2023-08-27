@@ -111,7 +111,8 @@ class CustomColorView extends BaseViewProtocol<CustomColorViewModel> {
                     mainAxisSpacing: 20),
                 itemBuilder: (context, index) {
                   return InkWell(
-                    onTap: () => consumer.selectImage(consumer.images[index]),
+                    onTap: () =>
+                        consumer.selectImage(consumer.images[index], index),
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(5),
                       child: SizedBox.fromSize(

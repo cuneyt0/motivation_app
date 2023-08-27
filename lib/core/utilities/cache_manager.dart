@@ -62,9 +62,9 @@ class CacheManager {
 
   Future<String?> getImage() async {
     final SharedPreferences prefs = await _prefs;
-    var a = prefs.getString(CacheManagerKey.image.toString());
-    print("$a");
-    return a;
+    var image = prefs.getString(CacheManagerKey.image.toString());
+
+    return image;
   }
 
   Future<bool> removeImage() async {
@@ -119,10 +119,8 @@ class CacheManager {
     if (_itemList.isNotEmpty == true) {
       for (var element in _itemList) {
         if (data == element) {
-          print("Eklenmedi");
           return false;
         } else {
-          print("Eşit Değil");
           _itemList.add(data);
           await prefs.setStringList(
               CacheManagerKey.favorite.toString(), _itemList);
@@ -130,7 +128,6 @@ class CacheManager {
         }
       }
     } else {
-      print("BOŞ");
       _itemList.add(data);
       await prefs.setStringList(CacheManagerKey.favorite.toString(), _itemList);
       return true;
@@ -143,7 +140,7 @@ class CacheManager {
     final SharedPreferences prefs = await _prefs;
     var a = prefs.getStringList(CacheManagerKey.favorite.toString());
     _itemList = a ?? [];
-    print("LİSTE ${a?.length}");
+
     return a;
   }
 
