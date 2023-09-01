@@ -44,8 +44,6 @@ class CustomColorViewModel extends BaseViewModel<CustomColorRouter> {
   }
 
   void selectImage(String? image, int index) async {
-    print("İndex $index");
-
     if (index == 2 || index == 6) {
       _changedColor(const Color(0xffcddc39));
     } else {

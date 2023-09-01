@@ -1,4 +1,3 @@
-import 'package:easy_localization/easy_localization.dart';
 import 'package:motivation_quotes/app/model/motivation/motivation.dart';
 import 'package:motivation_quotes/gen/locale_keys.g.dart';
 

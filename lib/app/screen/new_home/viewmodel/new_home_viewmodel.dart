@@ -7,6 +7,7 @@ import 'package:motivation_quotes/app/model/motivation/motivation.dart';
 import 'package:motivation_quotes/core/navigation/navigation.dart';
 import 'package:motivation_quotes/core/utilities/cache_manager.dart';
 import 'package:motivation_quotes/src/dictionaries/base_motivition_quotes.dart';
+import 'package:share_plus/share_plus.dart';
 
 import '../../../../core/base/base_viewmodel.dart';
 import '../route/new_home_router.dart';
@@ -15,7 +16,7 @@ class NewHomeViewModel extends BaseViewModel<NewHomeRouter> {
   NewHomeViewModel(NewHomeRouter router) : super(router);
   List<Motivation>? get dataList => _dataList;
   List<Motivation>? _dataList;
-  Color get backgroundColor => _backgroundColor ?? Colors.black;
+  Color get backgroundColor => _backgroundColor ?? Colors.transparent;
   Color? _backgroundColor;
 
   bool? isSelectedBackgroundImage = true;
@@ -26,9 +27,10 @@ class NewHomeViewModel extends BaseViewModel<NewHomeRouter> {
   bool get isprogressHandler => _isprogressHandler;
   bool _isprogressHandler = true;
   FlutterTts? flutterTts;
+  Color get textColor => _textColor ?? Colors.black;
+  Color? _textColor;
 
   void initVM() async {
-    print("INIT");
     //await CacheManager.instance.removeAllData();
     final type = await CacheManager.instance.getType();
     BaseMotivationQuotes.getInstance().setListType(type);
@@ -39,11 +41,16 @@ class NewHomeViewModel extends BaseViewModel<NewHomeRouter> {
     switch (isSelectedBackgroundImage) {
       case true:
         _backgroundImage = await CacheManager.instance.getImage();
+        _backgroundColor = null;
         break;
       default:
+        _backgroundColor = Color(
+            int.tryParse('${await CacheManager.instance.getColor()}') ??
+                0xFF42A5F5);
     }
-    _backgroundColor =
-        Color(int.tryParse('${await CacheManager.instance.getColor()}')!);
+    _textColor = Color(
+        int.tryParse('${await CacheManager.instance.getColor()}') ??
+            0xFF42A5F5);
 
     notifty();
   }
@@ -56,8 +63,8 @@ class NewHomeViewModel extends BaseViewModel<NewHomeRouter> {
   Future<void> speak(String text) async {
     switch (isprogressHandler) {
       case true:
-        await flutterTts?.setLanguage(
-            '${Navigation.navigatorKey.currentContext!.locale}'); //tr-Tr
+        await flutterTts
+            ?.setLanguage('${Navigation.navigatorKey.currentContext!.locale}');
         await flutterTts?.setPitch(1.0);
         await flutterTts?.setSpeechRate(0.4);
         await flutterTts?.speak(text);
@@ -92,6 +99,11 @@ class NewHomeViewModel extends BaseViewModel<NewHomeRouter> {
       await CacheManager.instance.getFavorite();
     }
 
+    notifty();
+  }
+
+  void sharedEvent(String note) {
+    Share.share(note, subject: ' Paylaş');
     notifty();
   }
 }
