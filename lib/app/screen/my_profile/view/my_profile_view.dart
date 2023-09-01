@@ -48,10 +48,15 @@ class MyProfileView extends BaseViewProtocol<MyProfileViewModel> {
             ),
           ),
         ),
-        Card(
-          child: ListTile(
-            title: AutoSizeText(LocaleKeys.my_profile_about_information.tr()),
-            trailing: const Icon(Icons.info),
+        InkWell(
+          onTap: () {
+            consumer.aboutDialog();
+          },
+          child: Card(
+            child: ListTile(
+              title: AutoSizeText(LocaleKeys.my_profile_about_information.tr()),
+              trailing: const Icon(Icons.info),
+            ),
           ),
         )
       ];

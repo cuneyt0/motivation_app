@@ -78,4 +78,88 @@ final List<Motivation> quotesChangeAndDevelopment = [
     note: LocaleKeys.motivation_list_changeAndDevelopment_nineteen,
     author: "",
   ),
+  Motivation(
+    note: LocaleKeys.motivation_list_changeAndDevelopment_twenty,
+    author: "",
+  ),
+  Motivation(
+    note: LocaleKeys.motivation_list_changeAndDevelopment_twenty_one,
+    author: "",
+  ),
+  Motivation(
+    note: LocaleKeys.motivation_list_changeAndDevelopment_twenty_two,
+    author: "",
+  ),
+  Motivation(
+    note: LocaleKeys.motivation_list_changeAndDevelopment_twenty_three,
+    author: "",
+  ),
+  Motivation(
+    note: LocaleKeys.motivation_list_changeAndDevelopment_twenty_four,
+    author: "",
+  ),
+  Motivation(
+    note: LocaleKeys.motivation_list_changeAndDevelopment_twenty_five,
+    author: "",
+  ),
+  Motivation(
+    note: LocaleKeys.motivation_list_changeAndDevelopment_twenty_six,
+    author: "",
+  ),
+  Motivation(
+    note: LocaleKeys.motivation_list_changeAndDevelopment_twenty_seven,
+    author: "",
+  ),
+  Motivation(
+    note: LocaleKeys.motivation_list_changeAndDevelopment_twenty_eight,
+    author: "",
+  ),
+  Motivation(
+    note: LocaleKeys.motivation_list_changeAndDevelopment_twenty_nine,
+    author: "",
+  ),
+  Motivation(
+    note: LocaleKeys.motivation_list_changeAndDevelopment_thirty,
+    author: "",
+  ),
+  Motivation(
+    note: LocaleKeys.motivation_list_changeAndDevelopment_thirty_one,
+    author: "",
+  ),
+  Motivation(
+    note: LocaleKeys.motivation_list_changeAndDevelopment_thirty_two,
+    author: "",
+  ),
+  Motivation(
+    note: LocaleKeys.motivation_list_changeAndDevelopment_thirty_three,
+    author: "",
+  ),
+  Motivation(
+    note: LocaleKeys.motivation_list_changeAndDevelopment_thirty_four,
+    author: "",
+  ),
+  Motivation(
+    note: LocaleKeys.motivation_list_changeAndDevelopment_thirty_five,
+    author: "",
+  ),
+  Motivation(
+    note: LocaleKeys.motivation_list_changeAndDevelopment_thirty_six,
+    author: "",
+  ),
+  Motivation(
+    note: LocaleKeys.motivation_list_changeAndDevelopment_thirty_seven,
+    author: "",
+  ),
+  Motivation(
+    note: LocaleKeys.motivation_list_changeAndDevelopment_thirty_eight,
+    author: "",
+  ),
+  Motivation(
+    note: LocaleKeys.motivation_list_changeAndDevelopment_thirty_nine,
+    author: "",
+  ),
+  Motivation(
+    note: LocaleKeys.motivation_list_changeAndDevelopment_fourty,
+    author: "",
+  ),
 ];
