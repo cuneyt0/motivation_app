@@ -38,4 +38,80 @@ final List<Motivation> quotesPositiveThinking = [
     note: LocaleKeys.motivation_list_positiveThinking_nine,
     author: "",
   ),
+  Motivation(
+    note: LocaleKeys.motivation_list_positiveThinking_ten,
+    author: "",
+  ),
+  Motivation(
+    note: LocaleKeys.motivation_list_positiveThinking_eleven,
+    author: "",
+  ),
+  Motivation(
+    note: LocaleKeys.motivation_list_positiveThinking_twelve,
+    author: "",
+  ),
+  Motivation(
+    note: LocaleKeys.motivation_list_positiveThinking_thirteen,
+    author: "",
+  ),
+  Motivation(
+    note: LocaleKeys.motivation_list_positiveThinking_fourteen,
+    author: "",
+  ),
+  Motivation(
+    note: LocaleKeys.motivation_list_positiveThinking_fifteen,
+    author: "",
+  ),
+  Motivation(
+    note: LocaleKeys.motivation_list_positiveThinking_sixteen,
+    author: "",
+  ),
+  Motivation(
+    note: LocaleKeys.motivation_list_positiveThinking_eighteen,
+    author: "",
+  ),
+  Motivation(
+    note: LocaleKeys.motivation_list_positiveThinking_nineteen,
+    author: "",
+  ),
+  Motivation(
+    note: LocaleKeys.motivation_list_positiveThinking_twenty,
+    author: "",
+  ),
+  Motivation(
+    note: LocaleKeys.motivation_list_positiveThinking_twenty_one,
+    author: "",
+  ),
+  Motivation(
+    note: LocaleKeys.motivation_list_positiveThinking_tewnty_two,
+    author: "",
+  ),
+  Motivation(
+    note: LocaleKeys.motivation_list_positiveThinking_twenty_three,
+    author: "",
+  ),
+  Motivation(
+    note: LocaleKeys.motivation_list_positiveThinking_twenty_four,
+    author: "",
+  ),
+  Motivation(
+    note: LocaleKeys.motivation_list_positiveThinking_twenty_five,
+    author: "",
+  ),
+  Motivation(
+    note: LocaleKeys.motivation_list_positiveThinking_twenty_six,
+    author: "",
+  ),
+  Motivation(
+    note: LocaleKeys.motivation_list_positiveThinking_twenty_eight,
+    author: "",
+  ),
+  Motivation(
+    note: LocaleKeys.motivation_list_positiveThinking_twenty_nine,
+    author: "",
+  ),
+  Motivation(
+    note: LocaleKeys.motivation_list_positiveThinking_twenty_one,
+    author: "",
+  ),
 ];
