@@ -78,4 +78,88 @@ final List<Motivation> quotesSport = [
     note: LocaleKeys.motivation_list_sports_nineteen,
     author: "",
   ),
+  Motivation(
+    note: LocaleKeys.motivation_list_sports_twenty,
+    author: "",
+  ),
+  Motivation(
+    note: LocaleKeys.motivation_list_sports_twenty_one,
+    author: "",
+  ),
+  Motivation(
+    note: LocaleKeys.motivation_list_sports_twenty_two,
+    author: "Robert H. Schuller",
+  ),
+  Motivation(
+    note: LocaleKeys.motivation_list_sports_twenty_three,
+    author: "Walter Bagehot",
+  ),
+  Motivation(
+    note: LocaleKeys.motivation_list_sports_twenty_four,
+    author: "",
+  ),
+  Motivation(
+    note: LocaleKeys.motivation_list_sports_twenty_five,
+    author: "Arnold Schwarzenegger",
+  ),
+  Motivation(
+    note: LocaleKeys.motivation_list_sports_twenty_six,
+    author: "",
+  ),
+  Motivation(
+    note: LocaleKeys.motivation_list_sports_twenty_seven,
+    author: "",
+  ),
+  Motivation(
+    note: LocaleKeys.motivation_list_sports_twenty_eight,
+    author: "Sean Hampton",
+  ),
+  Motivation(
+    note: LocaleKeys.motivation_list_sports_twenty_nine,
+    author: "Tim Notke",
+  ),
+  Motivation(
+    note: LocaleKeys.motivation_list_sports_thirty,
+    author: "Zig Ziglar",
+  ),
+  Motivation(
+    note: LocaleKeys.motivation_list_sports_thirty_one,
+    author: "Arnold Palmer",
+  ),
+  Motivation(
+    note: LocaleKeys.motivation_list_sports_thirty_two,
+    author: "Rocky Balboa",
+  ),
+  Motivation(
+    note: LocaleKeys.motivation_list_sports_thirty_three,
+    author: "",
+  ),
+  Motivation(
+    note: LocaleKeys.motivation_list_sports_thirty_four,
+    author: "",
+  ),
+  Motivation(
+    note: LocaleKeys.motivation_list_sports_thirty_five,
+    author: "",
+  ),
+  Motivation(
+    note: LocaleKeys.motivation_list_sports_thirty_six,
+    author: "",
+  ),
+  Motivation(
+    note: LocaleKeys.motivation_list_sports_thirty_seven,
+    author: "",
+  ),
+  Motivation(
+    note: LocaleKeys.motivation_list_sports_thirty_eight,
+    author: "",
+  ),
+  Motivation(
+    note: LocaleKeys.motivation_list_sports_thirty_nine,
+    author: "",
+  ),
+  Motivation(
+    note: LocaleKeys.motivation_list_sports_fourty,
+    author: "",
+  ),
 ];

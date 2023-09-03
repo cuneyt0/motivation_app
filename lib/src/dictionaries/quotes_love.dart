@@ -1,4 +1,3 @@
-import 'package:easy_localization/easy_localization.dart';
 import 'package:motivation_quotes/app/model/motivation/motivation.dart';
 import 'package:motivation_quotes/gen/locale_keys.g.dart';
 
@@ -86,5 +85,77 @@ final List<Motivation> quotesLove = [
   Motivation(
     note: LocaleKeys.motivation_list_love_twenty_one,
     author: "H. Jackson Brown Jr.",
+  ),
+  Motivation(
+    note: LocaleKeys.motivation_list_love_twenty_three,
+    author: "",
+  ),
+  Motivation(
+    note: LocaleKeys.motivation_list_love_twenty_four,
+    author: "",
+  ),
+  Motivation(
+    note: LocaleKeys.motivation_list_love_twenty_five,
+    author: "",
+  ),
+  Motivation(
+    note: LocaleKeys.motivation_list_love_twenty_six,
+    author: "",
+  ),
+  Motivation(
+    note: LocaleKeys.motivation_list_love_twenty_seven,
+    author: "",
+  ),
+  Motivation(
+    note: LocaleKeys.motivation_list_love_twenty_eight,
+    author: "",
+  ),
+  Motivation(
+    note: LocaleKeys.motivation_list_love_twenty_nine,
+    author: "",
+  ),
+  Motivation(
+    note: LocaleKeys.motivation_list_love_thirty,
+    author: "",
+  ),
+  Motivation(
+    note: LocaleKeys.motivation_list_love_thirty_one,
+    author: "",
+  ),
+  Motivation(
+    note: LocaleKeys.motivation_list_love_thirty_two,
+    author: "",
+  ),
+  Motivation(
+    note: LocaleKeys.motivation_list_love_thirty_three,
+    author: "",
+  ),
+  Motivation(
+    note: LocaleKeys.motivation_list_love_thirty_four,
+    author: "",
+  ),
+  Motivation(
+    note: LocaleKeys.motivation_list_love_thirty_five,
+    author: "",
+  ),
+  Motivation(
+    note: LocaleKeys.motivation_list_love_thirty_six,
+    author: "",
+  ),
+  Motivation(
+    note: LocaleKeys.motivation_list_love_thirty_seven,
+    author: "",
+  ),
+  Motivation(
+    note: LocaleKeys.motivation_list_love_thirty_eight,
+    author: "",
+  ),
+  Motivation(
+    note: LocaleKeys.motivation_list_love_thirty_nine,
+    author: "",
+  ),
+  Motivation(
+    note: LocaleKeys.motivation_list_love_fourty,
+    author: "",
   ),
 ];
